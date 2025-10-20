@@ -11,7 +11,7 @@ Bienvenida:
     LD IX,Titulo    ; Dirección del título
     CALL PRINTAT    ; Imprime el título
 
-    LD A,1          ; Letra azul, fondo negro
+    LD A,3          ; Letra moradito Vegetta, fondo negro
     LD B,10         ; Coordenadas para pintar el mensaje
     LD C,1       
     LD IX,Mensaje   ; Dirección del mensaje
@@ -42,7 +42,21 @@ Bienvenida:
     LD IX,Caracter
     CALL PRINTAT
 
-    RET             ; Retornar al programa principal
+    ; Comprobar si se pulsó 'N'
+    LD A,(Caracter)
+    CP 'N'
+    JR NZ, fin_bienvenida   ; Si no es 'N', salir
+
+    ; Si es 'N', mostrar mensaje de despedida
+    LD A,4          ; Color rojo
+    LD B,20         ; Fila 20
+    LD C,1          ; Columna 1
+    LD IX,Adios     ; Mensaje de despedida
+    CALL PRINTAT    ; Mostrar mensaje
+    JP 0            ; Volver al BASIC (cierra el programa)
+    
+fin_bienvenida:
+    RET             ; Retornar al programa principal para seguir las siguientes rutinas
 
 Coor_Atrib:
                         ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)
@@ -69,6 +83,7 @@ T_N:
     BIT 3,A
     JR NZ,T_S           ; Han pulsado N
     LD A,'N'
+    
     JR T_F
 T_S:            
     LD BC,$FDFE         ; Escanear línea G,F,D,S,A
@@ -89,6 +104,7 @@ Soltar_Tecla:           ; Rutina de espera hasta que se suelta la tecla
 Titulo:    db "Bienvenido al Conecta 4",0    ; Título
 Mensaje:   db "Empezamos una partida (S/N)? ",0   ; Mensaje inicial
 Respuesta: db "Has contestado: ",0      ; Mensaje con la respuesta
-Caracter:   db 0,0              ; Mensaje del carácter para imprimir
+Caracter:  db 0,0              ; Mensaje del carácter para imprimir
+Adios:     db "Gracias por jugar. Adios!",0 ; Mensaje de despedida
 
     INCLUDE printat.asm         ; Incluir el código de PRINTAT
