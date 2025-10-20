@@ -8,9 +8,8 @@ inicio:         DI              ; Deshabilitar interrupciones
 ;-------------------------------------------------------------------------------------------------
 ;Código del estudiante
 
-INCLUDE "bienvenida.asm"  ; Incluir el código de bienvenida
+    INCLUDE "bienvenida.asm"  ; Incluir el código de bienvenida
 
     CALL Bienvenida  ; Llamar a la rutina de bienvenida
-
 ;-------------------------------------------------------------------------------------------------
 fin:            JR fin          ; bucle infinito

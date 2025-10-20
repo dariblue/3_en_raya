@@ -1,8 +1,6 @@
-    ; Pregunta si se desea comenzar a jugar al Conecta 4
-    DEVICE ZXSPECTRUM48
-    ORG $8000
-    LD SP, 0
-
+; Rutina de bienvenida para el juego Conecta 4
+; Se incluye desde el programa principal
+Bienvenida:
     LD A, 0
     OUT ($FE),A     ; Poner el borde de la pantalla negro
     CALL CLEARSCR   ; Borrar pantalla
@@ -44,7 +42,7 @@
     LD IX,Caracter
     CALL PRINTAT
 
-fin:    JR fin
+    RET             ; Retornar al programa principal
 
 Coor_Atrib:
                         ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)
@@ -93,4 +91,4 @@ Mensaje:   db "Empezamos una partida (S/N)? ",0   ; Mensaje inicial
 Respuesta: db "Has contestado: ",0      ; Mensaje con la respuesta
 Caracter:   db 0,0              ; Mensaje del carácter para imprimir
 
-    INCLUDE printat.asm         ; Incluir el código de PRINTAT 
+    INCLUDE printat.asm         ; Incluir el código de PRINTAT
