@@ -1,5 +1,5 @@
-    DEVICE ZXSPECTRUM48
-	SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
+        DEVICE ZXSPECTRUM48
+	    SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
         ORG $8000               ; Programa ubicado a partir de $8000 = 32768
 
 inicio:         DI              ; Deshabilitar interrupciones
