@@ -1,0 +1,15 @@
+|SLD.data.version|1
+||K|KEYWORDS|WPMEM,LOGPOINT,ASSETION
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|1||0|-1|-1|Z|pages.size:16384,pages.count:4,slots.count:4,slots.adr:0,16384,32768,49152
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|F|inicio
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|L|,inicio,
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|T|
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|6||0|2|32769|T|
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|11||0|2|32772|F|bucle
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|11||0|2|32772|L|,bucle,,+used
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|12||0|2|32772|T|
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|13||0|2|32774|T|
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|14||0|2|32776|T|
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|17||0|2|32778|F|fin
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|17||0|2|32778|L|,fin,,+used
+/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|17||0|2|32778|T|

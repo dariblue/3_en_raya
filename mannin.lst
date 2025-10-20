@@ -1,0 +1,20 @@
+# file opened: /Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm
+ 1    0000                  DEVICE ZXSPECTRUM48
+ 2    0000                  SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
+ 3    0000                  ORG $8000               ; Programa ubicado a partir de $8000 = 32768
+ 4    8000
+ 5    8000 F3           inicio:         DI              ; Deshabilitar interrupciones
+ 6    8001 31 00 00         LD SP,0         ; Establecer el puntero de pila en la parte alta de la memoria
+ 7    8004
+ 8    8004              ;-------------------------------------------------------------------------------------------------
+ 9    8004              ;Código del estudiante
+10    8004
+11    8004              bucle:
+12    8004 ED 5F            LD A, R
+13    8006 D3 FE            OUT ($FE),A
+14    8008 18 FA            JR bucle
+15    800A
+16    800A              ;-------------------------------------------------------------------------------------------------
+17    800A 18 FE        fin:            JR fin          ; bucle infinito
+18    800C
+# file closed: /Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm
