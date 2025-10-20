@@ -8,10 +8,9 @@ inicio:         DI              ; Deshabilitar interrupciones
 ;-------------------------------------------------------------------------------------------------
 ;Código del estudiante
 
-bucle:
-    LD A, R
-    OUT ($FE),A
-    JR bucle
+INCLUDE "bienvenida.asm"  ; Incluir el código de bienvenida
+
+    CALL Bienvenida  ; Llamar a la rutina de bienvenida
 
 ;-------------------------------------------------------------------------------------------------
 fin:            JR fin          ; bucle infinito
