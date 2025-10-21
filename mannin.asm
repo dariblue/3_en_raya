@@ -16,4 +16,3 @@ inicio:     DI              ; Deshabilitar interrupciones
             CALL Bienvenida
 ;-------------------------------------------------------------------------------------------------
 fin:        JR fin          ; bucle infinito
-;vitto quiere probar pitto
