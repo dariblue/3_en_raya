@@ -2,14 +2,17 @@
 	    SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
         ORG $8000               ; Programa ubicado a partir de $8000 = 32768
 
-inicio:         DI              ; Deshabilitar interrupciones
-                LD SP,0         ; Establecer el puntero de pila en la parte alta de la memoria
+inicio:     DI              ; Deshabilitar interrupciones
+            LD SP,0         ; Establecer el puntero de pila en la parte alta de la memoria
         
 ;-------------------------------------------------------------------------------------------------
 ;Código del estudiante
 
     INCLUDE "bienvenida.asm"  ; Incluir el código de bienvenida
+    INCLUDE "pantalla_final.asm" ; Incluir el código de despedida
+    INCLUDE "printat.asm"         ; Incluir el código de PRINTAT
+    
 
-    CALL Bienvenida  ; Llamar a la rutina de bienvenida
+            CALL Bienvenida
 ;-------------------------------------------------------------------------------------------------
-fin:            JR fin          ; bucle infinito
+fin:        JR fin          ; bucle infinito
