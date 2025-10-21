@@ -5,8 +5,8 @@
 
 ### Dibujar Pantalla Inicial:  
     - [ ] Dibujito Conecta 4  
-    - [ ] Preguntar por partida de forma funcional.  
-    - [ ] mostrar mensaje de adios si no se quiere jugar.  
+    - [x] Preguntar por partida de forma funcional. (TODO redirigir)  
+    - [x] mostrar mensaje de adios si no se quiere jugar.  
 ### Dibujar el tablero (6x7)
     - [ ] fichas de 2x3
 ### Dibujar la ficha Inicial
@@ -15,7 +15,7 @@
     - [ ] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
     - [ ] F -> simula fin de la partida
 ### Dibujar Pantalla Final:
-    - [ ] mostrar mensaje de fin de partida
-    - [ ] preguntar si quiere otra partida de forma funcional (en caso de que si inicializar la siguiente partida)
-    - [ ] hola 
+    - [x] mostrar mensaje de fin de partida
+    - [x] preguntar si quiere otra partida de forma funcional (en caso de que si inicializar la siguiente partida) (TODO redirigir)
+
 
