@@ -1,210 +1,242 @@
 |SLD.data.version|1
 ||K|KEYWORDS|WPMEM,LOGPOINT,ASSETION
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|1||0|-1|-1|Z|pages.size:16384,pages.count:4,slots.count:4,slots.adr:0,16384,32768,49152
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|F|inicio
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|L|,inicio,
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|5||0|2|32768|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|6||0|2|32769|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|3||0|2|32772|F|Bienvenida
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|3||0|2|32772|L|,Bienvenida,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|4||0|2|32772|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|5||0|2|32774|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|6||0|2|32776|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|8||0|2|32779|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|9||0|2|32781|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|10||0|2|32783|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|11||0|2|32785|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|12||0|2|32789|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|14||0|2|32792|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|15||0|2|32794|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|16||0|2|32796|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|17||0|2|32798|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|18||0|2|32802|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|20||0|2|32805|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|21||0|2|32807|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|22||0|2|32809|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|23||0|2|32812|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|24||0|2|32814|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|26||0|2|32815|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|28||0|2|32818|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|29||0|2|32820|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|30||0|2|32822|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|31||0|2|32824|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|32||0|2|32828|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|34||0|2|32831|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|35||0|2|32833|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|36||0|2|32835|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|37||0|2|32837|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|38||0|2|32841|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|39||0|2|32844|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|40||0|2|32846|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|41||0|2|32848|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|42||0|2|32850|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|43||0|2|32854|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|45||0|2|32857|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|47||0|2|32858|F|Coor_Atrib
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|47||0|2|32858|L|,Coor_Atrib,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|50||0|2|32858|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|51||0|2|32859|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|52||0|2|32860|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|53:1:12||0|2|32861|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|53:12:20||0|2|32863|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|53:20||0|2|32865|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|54||0|2|32867|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|55:1:12||0|2|32868|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|55:12:20||0|2|32870|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|55:20:28||0|2|32872|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|55:28:36||0|2|32874|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|55:36||0|2|32876|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|56||0|2|32878|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|57||0|2|32879|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|58||0|2|32880|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|59||0|2|32883|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|60||0|2|32884|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|61||0|2|32885|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|62||0|2|32886|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|64||0|2|32887|F|Teclado
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|64||0|2|32887|L|,Teclado,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|65||0|2|32887|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|66||0|2|32888|F|T_N
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|66||0|2|32888|L|,T_N,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|67||0|2|32888|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|68||0|2|32891|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|69||0|2|32893|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|70||0|2|32895|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|71||0|2|32897|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|72||0|2|32899|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|73||0|2|32901|F|T_S
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|73||0|2|32901|L|,T_S,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|74||0|2|32901|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|75||0|2|32904|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|76||0|2|32906|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|77||0|2|32908|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|78||0|2|32910|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|79||0|2|32912|F|T_F
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|79||0|2|32912|L|,T_F,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|80||0|2|32912|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|81||0|2|32915|F|Soltar_Tecla
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|81||0|2|32915|L|,Soltar_Tecla,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|82||0|2|32915|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|83||0|2|32917|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|84||0|2|32919|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|85||0|2|32921|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|86||0|2|32923|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|87||0|2|32924|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|89||0|2|32925|F|Titulo
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|89||0|2|32925|L|,Titulo,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|90||0|2|32949|F|Mensaje
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|90||0|2|32949|L|,Mensaje,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|91||0|2|32979|F|Respuesta
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|91||0|2|32979|L|,Respuesta,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|92||0|2|32996|F|Caracter
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/bienvenida.asm|92||0|2|32996|L|,Caracter,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|14||0|2|32998|F|PRINTAT
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|14||0|2|32998|L|,PRINTAT,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|14||0|2|32998|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|20||0|2|33001|F|PRINTSTR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|20||0|2|33001|L|,PRINTSTR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|20||0|2|33001|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|21||0|2|33004|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|22||0|2|33005|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|23||0|2|33006|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|24||0|2|33009|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|25||0|2|33011|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|32||0|2|33013|F|PREP_PRT
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|32||0|2|33013|L|,PREP_PRT,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|32||0|2|33013|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|33||0|2|33016|F|PREP_PRT_2
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|33||0|2|33016|L|,PREP_PRT_2,
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|33||0|2|33016|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|34||0|2|33019|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|45||0|2|33022|F|CRtoSCREEN
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|45||0|2|33022|L|,CRtoSCREEN,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|46||0|2|33022|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|47||0|2|33023|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|48||0|2|33025|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|49||0|2|33027|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|51||0|2|33028|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|52||0|2|33029|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|53||0|2|33031|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|54||0|2|33032|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|55||0|2|33033|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|56||0|2|33034|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|57||0|2|33035|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|58||0|2|33036|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|59||0|2|33039|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|72||0|2|33040|F|CRtoATTR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|72||0|2|33040|L|,CRtoATTR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|73||0|2|33040|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|74||0|2|33041|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|75||0|2|33042|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|76||0|2|33043|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|77||0|2|33044|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|78||0|2|33045|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|79||0|2|33047|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|80||0|2|33049|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|82||0|2|33050|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|83||0|2|33051|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|84||0|2|33053|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|85||0|2|33054|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|87||0|2|33055|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|88||0|2|33058|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|96||0|2|33059|F|PRINTCHNUM
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|96||0|2|33059|L|,PRINTCHNUM,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|97||0|2|33059|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|98||0|2|33061|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|99||0|2|33062|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|100||0|2|33063|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|101||0|2|33064|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|102||0|2|33065|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|103||0|2|33068|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|104||0|2|33069|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|112||0|2|33070|F|PRINTCHAR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|112||0|2|33070|L|,PRINTCHAR,
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|113||0|2|33070|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|114||0|2|33072|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|116||0|2|33075|F|BYTEPCHAR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|116||0|2|33075|L|,BYTEPCHAR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|116||0|2|33075|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|117||0|2|33076|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|118||0|2|33077|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|119||0|2|33078|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|120||0|2|33079|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|121||0|2|33081|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|122||0|2|33084|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|123||0|2|33087|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|124||0|2|33088|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|125||0|2|33091|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|126||0|2|33092|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|127||0|2|33095|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|128||0|2|33096|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|137||0|2|33097|F|INK2PAPER
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|137||0|2|33097|L|,INK2PAPER,
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|137||0|2|33097|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|138||0|2|33100|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|139||0|2|33102|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|140||0|2|33103|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|141||0|2|33104|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|142||0|2|33105|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|143||0|2|33107|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|144||0|2|33110|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|150||0|2|33111|F|CLEARSCR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|150||0|2|33111|L|,CLEARSCR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|150||0|2|33111|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|151||0|2|33114|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|152||0|2|33117|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|153||0|2|33120|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|154||0|2|33122|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|155||0|2|33124|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|158:1:14||0|2|33125|F|SCR_CUR_PTR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|158:1:14||0|2|33125|L|,SCR_CUR_PTR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|159||0|2|33127|F|SCR_ATTR_PTR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|159||0|2|33127|L|,SCR_ATTR_PTR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|160||0|2|33129|F|PRINT_ATTR
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|160||0|2|33129|L|,PRINT_ATTR,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|162||0|2|33130|F|CHARSET
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/printat.asm|162||0|2|33130|L|,CHARSET,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|13||0|2|33898|T|
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|15||0|2|33901|F|fin
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|15||0|2|33901|L|,fin,,+used
-/Users/d4r1/Documents/UFV/2º/Arqui/3_en_raya/mannin.asm|15||0|2|33901|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|1||0|-1|-1|Z|pages.size:16384,pages.count:4,slots.count:4,slots.adr:0,16384,32768,49152
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|5||0|2|32768|F|inicio
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|5||0|2|32768|L|,inicio,
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|5||0|2|32768|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|6||0|2|32769|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|3||0|2|32772|F|Bienvenida
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|3||0|2|32772|L|,Bienvenida,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|4||0|2|32772|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|5||0|2|32774|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|6||0|2|32776|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|8||0|2|32779|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|9||0|2|32781|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|10||0|2|32783|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|11||0|2|32785|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|12||0|2|32789|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|14||0|2|32792|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|15||0|2|32794|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|16||0|2|32796|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|17||0|2|32798|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|18||0|2|32802|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|20||0|2|32805|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|21||0|2|32807|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|22||0|2|32809|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|23||0|2|32812|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|24||0|2|32814|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|26||0|2|32815|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|28||0|2|32818|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|29||0|2|32820|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|30||0|2|32822|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|31||0|2|32824|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|32||0|2|32828|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|34||0|2|32831|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|35||0|2|32833|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|36||0|2|32835|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|37||0|2|32837|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|38||0|2|32841|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|39||0|2|32844|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|40||0|2|32846|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|41||0|2|32848|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|42||0|2|32850|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|43||0|2|32854|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|46||0|2|32857|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|47||0|2|32860|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|48||0|2|32862|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|51||0|2|32864|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|52||0|2|32866|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|53||0|2|32868|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|55||0|2|32870|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|56||0|2|32874|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|57||0|2|32877|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|59||0|2|32880|F|fin_bienvenida
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|59||0|2|32880|L|,fin_bienvenida,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|60||0|2|32880|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|61||0|2|32883|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|63||0|2|32886|F|Coor_Atrib
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|63||0|2|32886|L|,Coor_Atrib,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|66||0|2|32886|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|67||0|2|32887|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|68||0|2|32888|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|69:1:12||0|2|32889|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|69:12:20||0|2|32891|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|69:20||0|2|32893|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|70||0|2|32895|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|71:1:12||0|2|32896|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|71:12:20||0|2|32898|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|71:20:28||0|2|32900|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|71:28:36||0|2|32902|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|71:36||0|2|32904|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|72||0|2|32906|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|73||0|2|32907|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|74||0|2|32908|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|75||0|2|32911|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|76||0|2|32912|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|77||0|2|32913|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|78||0|2|32914|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|80||0|2|32915|F|Teclado
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|80||0|2|32915|L|,Teclado,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|81||0|2|32915|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|82||0|2|32916|F|T_N
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|82||0|2|32916|L|,T_N,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|83||0|2|32916|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|84||0|2|32919|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|85||0|2|32921|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|86||0|2|32923|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|87||0|2|32925|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|89||0|2|32927|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|90||0|2|32929|F|T_S
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|90||0|2|32929|L|,T_S,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|91||0|2|32929|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|92||0|2|32932|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|93||0|2|32934|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|94||0|2|32936|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|95||0|2|32938|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|96||0|2|32940|F|T_F
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|96||0|2|32940|L|,T_F,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|97||0|2|32940|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|98||0|2|32943|F|Soltar_Tecla
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|98||0|2|32943|L|,Soltar_Tecla,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|99||0|2|32943|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|100||0|2|32945|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|101||0|2|32947|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|102||0|2|32949|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|103||0|2|32951|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|104||0|2|32952|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|106||0|2|32953|F|Titulo
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|106||0|2|32953|L|,Titulo,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|107||0|2|32977|F|Mensaje
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|107||0|2|32977|L|,Mensaje,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|108||0|2|33007|F|Respuesta
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|108||0|2|33007|L|,Respuesta,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|109||0|2|33024|F|Caracter
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|109||0|2|33024|L|,Caracter,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|110||0|2|33026|F|Adios
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\bienvenida.asm|110||0|2|33026|L|,Adios,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|4||0|2|33052|F|Despedida
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|4||0|2|33052|L|,Despedida,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|5||0|2|33052|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|6||0|2|33054|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|8||0|2|33056|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|9||0|2|33058|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|10||0|2|33060|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|11||0|2|33062|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|12||0|2|33066|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|14||0|2|33069|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|15||0|2|33071|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|16||0|2|33073|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|17||0|2|33075|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|18||0|2|33079|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|20||0|2|33082|F|Titulo_final
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|20||0|2|33082|L|,Titulo_final,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|21||0|2|33105|F|Mensaje_final
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\pantalla_final.asm|21||0|2|33105|L|,Mensaje_final,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|14||0|2|33136|F|PRINTAT
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|14||0|2|33136|L|,PRINTAT,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|14||0|2|33136|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|20||0|2|33139|F|PRINTSTR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|20||0|2|33139|L|,PRINTSTR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|20||0|2|33139|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|21||0|2|33142|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|22||0|2|33143|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|23||0|2|33144|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|24||0|2|33147|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|25||0|2|33149|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|32||0|2|33151|F|PREP_PRT
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|32||0|2|33151|L|,PREP_PRT,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|32||0|2|33151|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|33||0|2|33154|F|PREP_PRT_2
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|33||0|2|33154|L|,PREP_PRT_2,
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|33||0|2|33154|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|34||0|2|33157|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|45||0|2|33160|F|CRtoSCREEN
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|45||0|2|33160|L|,CRtoSCREEN,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|46||0|2|33160|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|47||0|2|33161|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|48||0|2|33163|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|49||0|2|33165|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|51||0|2|33166|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|52||0|2|33167|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|53||0|2|33169|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|54||0|2|33170|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|55||0|2|33171|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|56||0|2|33172|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|57||0|2|33173|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|58||0|2|33174|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|59||0|2|33177|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|72||0|2|33178|F|CRtoATTR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|72||0|2|33178|L|,CRtoATTR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|73||0|2|33178|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|74||0|2|33179|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|75||0|2|33180|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|76||0|2|33181|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|77||0|2|33182|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|78||0|2|33183|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|79||0|2|33185|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|80||0|2|33187|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|82||0|2|33188|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|83||0|2|33189|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|84||0|2|33191|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|85||0|2|33192|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|87||0|2|33193|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|88||0|2|33196|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|96||0|2|33197|F|PRINTCHNUM
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|96||0|2|33197|L|,PRINTCHNUM,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|97||0|2|33197|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|98||0|2|33199|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|99||0|2|33200|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|100||0|2|33201|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|101||0|2|33202|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|102||0|2|33203|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|103||0|2|33206|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|104||0|2|33207|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|112||0|2|33208|F|PRINTCHAR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|112||0|2|33208|L|,PRINTCHAR,
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|113||0|2|33208|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|114||0|2|33210|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|116||0|2|33213|F|BYTEPCHAR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|116||0|2|33213|L|,BYTEPCHAR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|116||0|2|33213|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|117||0|2|33214|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|118||0|2|33215|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|119||0|2|33216|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|120||0|2|33217|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|121||0|2|33219|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|122||0|2|33222|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|123||0|2|33225|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|124||0|2|33226|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|125||0|2|33229|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|126||0|2|33230|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|127||0|2|33233|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|128||0|2|33234|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|137||0|2|33235|F|INK2PAPER
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|137||0|2|33235|L|,INK2PAPER,
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|137||0|2|33235|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|138||0|2|33238|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|139||0|2|33240|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|140||0|2|33241|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|141||0|2|33242|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|142||0|2|33243|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|143||0|2|33245|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|144||0|2|33248|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|150||0|2|33249|F|CLEARSCR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|150||0|2|33249|L|,CLEARSCR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|150||0|2|33249|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|151||0|2|33252|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|152||0|2|33255|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|153||0|2|33258|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|154||0|2|33260|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|155||0|2|33262|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|158:1:14||0|2|33263|F|SCR_CUR_PTR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|158:1:14||0|2|33263|L|,SCR_CUR_PTR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|159||0|2|33265|F|SCR_ATTR_PTR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|159||0|2|33265|L|,SCR_ATTR_PTR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|160||0|2|33267|F|PRINT_ATTR
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|160||0|2|33267|L|,PRINT_ATTR,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|162||0|2|33268|F|CHARSET
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\printat.asm|162||0|2|33268|L|,CHARSET,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|16||0|2|34036|T|
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|18||0|2|34039|F|fin
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|18||0|2|34039|L|,fin,,+used
+C:\Users\Usuario\OneDrive\University\UFV\25_26\Arquitectura y Organizacion de Computadores\3_en_raya\mannin.asm|18||0|2|34039|T|
