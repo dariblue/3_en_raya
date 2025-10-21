@@ -17,10 +17,10 @@ Bienvenida:
     LD IX,Mensaje   ; Dirección del mensaje
     CALL PRINTAT    ; Imprime el mensaje
 
+    LD A,1+$80      ; Azul parpadeante
     LD B,20         ; Buscamos la dirección del atributo de coordenadas 20,30
     LD C,30         ; Para poner el cursor
     CALL Coor_Atrib ; Esta rutina devuelve en HL la dirección del atributo
-    LD A,1+$80      ; Azul parpadeante
     LD (HL),A       ; Pongo el atributo
 
     CALL Teclado    ; Leo el teclado hasta que pulsen S o N
