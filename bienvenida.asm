@@ -57,7 +57,8 @@ Bienvenida:
     
 fin_bienvenida:
     CALL CLEARSCR   ; Borrar pantalla
-    CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas
+    CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
+    ; TODO (cambiar cuando tengamos bien la rutina de juego)
 
 Coor_Atrib:
                         ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)
@@ -94,6 +95,7 @@ T_S:
     LD A,'S'
 T_F:     
     LD (Caracter),A     ; Guardo 'S' o 'N' en la Variable Caracter 
+
 Soltar_Tecla:           ; Rutina de espera hasta que se suelta la tecla
     IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
     AND $1F

@@ -9,3 +9,5 @@ mannin.bin
 mannin.lst
 mannin.sld
 .temp
+.tmp/disasm.list
+*.list
