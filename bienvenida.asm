@@ -17,10 +17,10 @@ Bienvenida:
     LD IX,Mensaje   ; Dirección del mensaje
     CALL PRINTAT    ; Imprime el mensaje
 
+    LD A,1+$80      ; Azul parpadeante
     LD B,20         ; Buscamos la dirección del atributo de coordenadas 20,30
     LD C,30         ; Para poner el cursor
     CALL Coor_Atrib ; Esta rutina devuelve en HL la dirección del atributo
-    LD A,1+$80      ; Azul parpadeante
     LD (HL),A       ; Pongo el atributo
 
     CALL Teclado    ; Leo el teclado hasta que pulsen S o N
@@ -48,13 +48,12 @@ Bienvenida:
     JR NZ, fin_bienvenida   ; Si no es 'N', salir
 
     ; Si es 'N', mostrar mensaje de despedida
-    LD A,4          ; Color rojo
-    LD B,10        ; Fila 20
+    LD A,4          ; Color verde
+    LD B,10         ; Fila 10
     LD C,1          ; Columna 1
-
     LD IX,Adios     ; Mensaje de despedida
     CALL PRINTAT    ; Mostrar mensaje
-    JP 0            ; Volver al BASIC (cierra el programa)
+    HALT            ; Detener la ejecución
     
 fin_bienvenida:
     CALL CLEARSCR   ; Borrar pantalla
