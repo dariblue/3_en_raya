@@ -48,13 +48,12 @@ Bienvenida:
     JR NZ, fin_bienvenida   ; Si no es 'N', salir
 
     ; Si es 'N', mostrar mensaje de despedida
-    LD A,4          ; Color rojo
-    LD B,10        ; Fila 20
+    LD A,4          ; Color verde
+    LD B,10         ; Fila 10
     LD C,1          ; Columna 1
-
     LD IX,Adios     ; Mensaje de despedida
     CALL PRINTAT    ; Mostrar mensaje
-    JP 0            ; Volver al BASIC (cierra el programa)
+    HALT            ; Detener la ejecución
     
 fin_bienvenida:
     CALL CLEARSCR   ; Borrar pantalla
