@@ -5,6 +5,12 @@ Bienvenida:
     OUT ($FE),A     ; Poner el borde de la pantalla negro
     CALL CLEARSCR   ; Borrar pantalla
 
+    LD HL, XD
+    LD DE, $4000
+    LD BC, $5B00 - $4000
+    LDIR  
+    
+
     LD A,2+$80      ; Letra roja, fondo negro, parpadeante
     LD B,1          ; Coordenadas para pintar el título
     LD C,4       
@@ -55,6 +61,8 @@ Bienvenida:
     CALL PRINTAT    ; Mostrar mensaje
     HALT            ; Detener la ejecución
     
+
+
 fin_bienvenida:
     CALL CLEARSCR   ; Borrar pantalla
     CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
@@ -109,4 +117,4 @@ Mensaje:   db "Empezamos una partida (S/N)? ",0   ; Mensaje inicial
 Respuesta: db "Has contestado: ",0      ; Mensaje con la respuesta
 Caracter:  db 0,0              ; Mensaje del carácter para imprimir
 Adios:     db "Gracias por jugar. Adios!",0 ; Mensaje de despedida
-
+XD:    INCBIN "elreal.scr"
