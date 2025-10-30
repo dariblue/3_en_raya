@@ -2,6 +2,7 @@
 ; Se incluye desde el programa principal
 
 Despedida:
+    CALL CLEARSCR   ; Borrar pantalla
     LD A, 0
     OUT ($FE),A     ; Poner el borde de la pantalla negro
 
@@ -46,7 +47,7 @@ Despedida:
     ; Comprobar si se pulsó 'N'
     LD A,(Caracter_final)
     CP 'N'
-    JR NZ, fin_despedida   ; Si no es 'N', ir a juego
+    JR NZ, fin_despedida   ; Si no es 'N', si es 'S', ir a juego
 
     ; Si es 'N', mostrar mensaje de despedida
     LD A,4          ; Color verde
@@ -56,7 +57,7 @@ Despedida:
     CALL PRINTAT    ; Mostrar mensaje
     HALT            ; Detener la ejecución
 
-fin_despedida:
+fin_despedida: ;Va a juegar de nuevo
     CALL CLEARSCR   ; Borrar pantalla
     HALT
     ; CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
