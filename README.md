@@ -3,8 +3,8 @@
 
 # Cosas pendientes a hacer:
 
-### Dibujar Pantalla Inicial:  
-    - [ ] Dibujito Conecta 4  
+### DONE. Dibujar Pantalla Inicial:  
+    - [x] Dibujito Conecta 4  
     - [x] Preguntar por partida de forma funcional. (TODO redirigir)  
     - [x] mostrar mensaje de adios si no se quiere jugar.  
 ### Dibujar el tablero (6x7)
@@ -14,7 +14,7 @@
     - [ ] mover la pieza derecha (W) e izquierda (Q)
     - [ ] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
     - [ ] F -> simula fin de la partida
-### Dibujar Pantalla Final:
+### DONE. Dibujar Pantalla Final:
     - [x] mostrar mensaje de fin de partida
     - [x] preguntar si quiere otra partida de forma funcional (en caso de que si inicializar la siguiente partida) (TODO redirigir)
 
