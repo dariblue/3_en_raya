@@ -37,6 +37,8 @@ Bienvenida:
     LD IX,Caracter
     CALL PRINTAT
 
+    CALL CLEARSCR       ; Borrar pantalla
+    
     LD A,7          ; Letra azul, fondo negro
     LD B,18         ; Coordenadas para pintar el mensaje
     LD C,1       
@@ -63,7 +65,7 @@ Bienvenida:
     
 
 
-fin_bienvenida:
+fin_bienvenida: ;Va al juego
     CALL CLEARSCR   ; Borrar pantalla
     CALL Juego    ; rutina de juego 
     ; TODO (cambiar cuando tengamos bien la rutina de juego)
