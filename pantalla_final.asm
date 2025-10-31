@@ -59,7 +59,7 @@ Despedida:
 
 fin_despedida: ;Va a juegar de nuevo
     CALL CLEARSCR   ; Borrar pantalla
-    HALT
+    CALL Juego
     ; CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
     ; TODO (cambiar cuando tengamos bien la rutina de juego)
 
