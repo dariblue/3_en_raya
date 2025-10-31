@@ -33,6 +33,8 @@ Despedida:
     LD IX,Caracter_final
     CALL PRINTAT
 
+    CALL CLEARSCR       ; Borrar pantalla
+    
     LD A,7          ; Letra azul, fondo negro
     LD B,18         ; Coordenadas para pintar el mensaje
     LD C,1       
@@ -59,9 +61,7 @@ Despedida:
 
 fin_despedida: ;Va a juegar de nuevo
     CALL CLEARSCR   ; Borrar pantalla
-    CALL Juego
-    ; CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
-    ; TODO (cambiar cuando tengamos bien la rutina de juego)
+    CALL Inicializar ; Llamar a la rutina de inicialización
 
 Coor_Atrib2:
     ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)

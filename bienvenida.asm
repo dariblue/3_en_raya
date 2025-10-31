@@ -67,7 +67,7 @@ Bienvenida:
 
 fin_bienvenida: ;Va al juego
     CALL CLEARSCR   ; Borrar pantalla
-    CALL Juego    ; rutina de juego 
+    CALL Inicializar ; Llamar a la rutina de inicialización
 
 Coor_Atrib:
                         ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)
