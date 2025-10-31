@@ -19,3 +19,9 @@
     - [x] preguntar si quiere otra partida de forma funcional (en caso de que si inicializar la siguiente partida) (TODO redirigir)
 
 
+
+### rutinas que deberíamos tener:
+    - Inicializar
+    - Partida
+    - Pintar_ficha
+    - 
