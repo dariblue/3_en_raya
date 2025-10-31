@@ -8,7 +8,7 @@
     - [x] Preguntar por partida de forma funcional. (TODO redirigir)  
     - [x] mostrar mensaje de adios si no se quiere jugar.  
 ### Dibujar el tablero (6x7)
-    - [ ] fichas de 2x3
+    - [X] fichas de 2x3
 ### Dibujar la ficha Inicial
     - [ ] 1ºcolumna 1ºcolor
     - [ ] mover la pieza derecha (W) e izquierda (Q)
