@@ -65,7 +65,7 @@ Bienvenida:
 
 fin_bienvenida:
     CALL CLEARSCR   ; Borrar pantalla
-    CALL Despedida    ; Retornar al programa principal para seguir las siguientes rutinas 
+    CALL Juego    ; rutina de juego 
     ; TODO (cambiar cuando tengamos bien la rutina de juego)
 
 Coor_Atrib:
@@ -117,4 +117,4 @@ Mensaje:   db "Empezamos una partida (S/N)? ",0   ; Mensaje inicial
 Respuesta: db "Has contestado: ",0      ; Mensaje con la respuesta
 Caracter:  db 0,0              ; Mensaje del carácter para imprimir
 Adios:     db "Gracias por jugar. Adios!",0 ; Mensaje de despedida
-XD:    INCBIN "elreal.scr"
+XD:        INCBIN "elreal.scr"
