@@ -18,13 +18,13 @@ Bienvenida:
     CALL PRINTAT    ; Imprime el título
 
     LD A,3          ; Letra moradito Vegetta, fondo negro
-    LD B,20         ; Coordenadas para pintar el mensaje
+    LD B,21         ; Coordenadas para pintar el mensaje
     LD C,1       
     LD IX,Mensaje   ; Dirección del mensaje
     CALL PRINTAT    ; Imprime el mensaje
 
     LD A,1+$80      ; Azul parpadeante
-    LD B,20         ; Buscamos la dirección del atributo de coordenadas 20,30
+    LD B,21         ; Buscamos la dirección del atributo de coordenadas 21,30
     LD C,30         ; Para poner el cursor
     CALL Coor_Atrib ; Esta rutina devuelve en HL la dirección del atributo
     LD (HL),A       ; Pongo el atributo
@@ -32,7 +32,7 @@ Bienvenida:
     CALL Teclado    ; Leo el teclado hasta que pulsen S o N
 
     LD A,1          ; Eco de la tecla pulsada
-    LD B,20
+    LD B,21
     LD C,30
     LD IX,Caracter
     CALL PRINTAT
