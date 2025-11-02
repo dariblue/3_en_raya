@@ -4,64 +4,67 @@ Juego:
     CALL GameLoop
     RET
 
-; Dibuja tablero copiando la imagen "tablerito" a la pantalla ($4000)
+; Dibuja el tablero inicial (tablerito.scr) y la ficha del jugador activo
 DrawBoard:
-    LD HL, tablerito
-    LD DE, $4000
-    LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes)
-    LDIR
+    LD HL, tablerito 
+    LD DE, $4000  ; Dirección de pantalla en ZX Spectrum
+    LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes) tamaño pantalla ZX Spectrum
+    LDIR 
 
     ; Pintar ficha inicial del jugador activo usando overlay full-screen
-    CALL PaintPiece_FullScreen
+    CALL Piececita
     RET
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
-GameLoop:
-WaitKey:
-    ; Lectura simple: detecta cualquier pulsación.
-    LD BC, $7FFE
-    IN A,(C)
-    CP 255
-    JR Z, WaitKey     ; sin pulsación -> seguir esperando
+GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
+    RET
 
-    ; Opcional: esperar a soltar para evitar rebotes (si tienes Soltar_Tecla)
-    ; CALL Soltar_Tecla
+;TODO rutina de esperar tecla (bienvenida tiene una similar)
 
-    ; Cambiar jugador (usa la rutina renombrada)
-    CALL cambiar_jugapuertas
+Piececita: 
+    ; Aquí se pintaría la ficha del jugador activo en la posición inicial
 
-    ; Repintar la ficha en pantalla con el recurso correspondiente
-    CALL PaintPiece_FullScreen
+    ; Poner el atributo (color) de la ficha
+    LD A,D        ; cargar color desde la variable/etiqueta D (como tenías)
+    LD B,12
+    LD C,15
+    CALL Coor_Atrib  ; HL = dirección del atributo
+    LD (HL),A        ; escribir color
 
-    JR WaitKey
+    ; Dirección del bitmap para fila=12,col=15 calculada previamente:
+    ; offset = (12*32) + 15 = 3087 -> $C0F ; dirección = $4000 + $C0F = $4C0F
+    LD HL,$4C0F      ; inicio del bloque de píxels para esa casilla
 
-; Pintar ficha usando overlay full-screen según jugador activo (D)
-; Asume que pittorojo.scr y fichaamarilla.scr son imágenes full-screen (6912 bytes)
-PaintPiece_FullScreen:
-    ; Entrada: D = color actual (2 = pittorojo, 6 = fichaamarilla)
-    LD A, D
-    CP 2
-    JR Z, Use_Pittorojo
-    CP 6
-    JR Z, Use_FichaAmarilla
-    RET                 ; color desconocido -> no pintar
+    ; Usamos DE como puntero para escribir bytes
+    LD D,H
+    LD E,L
 
-Use_Pittorojo:
-    LD HL, pittorojo
-    JR DoBlit
+    ; Primera fila de bytes (3 columnas)
+    LD A,%00011000
+    LD (DE),A
+    INC E
+    LD A,%00100100
+    LD (DE),A
+    INC E
+    LD A,%01000010
+    LD (DE),A
 
-Use_FichaAmarilla:
-    LD HL, fichaamarilla
+    ; Segunda fila: DE = base + 256 (siguiente línea de pixels)
+    LD D,H
+    LD E,L
+    INC D            ; +256
+    LD A,%01111110
+    LD (DE),A
+    INC E
+    LD A,%11100111
+    LD (DE),A
+    INC E
+    LD A,%01111110
+    LD (DE),A
 
-DoBlit:
-    LD DE, $4000
-    LD BC, $5B00 - $4000    ; 6912 bytes = tamaño pantalla ZX Spectrum
-    LDIR
     RET
 
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr"
 
-; INCBIN recursos de fichas (full-screen overlays)
-pittorojo:      INCBIN "pittorojo.scr"
-fichaamarilla:  INCBIN "fichamarilla.scr"
+
