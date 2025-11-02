@@ -30,37 +30,17 @@ Piececita:
     LD C,2
     CALL Coor_Atrib  ; HL = dirección del atributo
     LD (HL),A        ; escribir color
-
-    ; Dirección del bitmap para fila=12,col=15 calculada previamente:
-    ; offset = (12*32) + 15 = 3087 -> $C0F ; dirección = $4000 + $C0F = $4C0F
-    LD HL,$4C0F      ; inicio del bloque de píxels para esa casilla
-
-    ; Usamos DE como puntero para escribir bytes
-    LD D,H
-    LD E,L
-
-    ; Primera fila de bytes (3 columnas)
-    LD A,%00011000
-    LD (DE),A
-    INC E
-    LD A,%00100100
-    LD (DE),A
-    INC E
-    LD A,%01000010
-    LD (DE),A
-
-    ; Segunda fila: DE = base + 256 (siguiente línea de pixels)
-    LD D,H
-    LD E,L
-    INC D            ; +256
-    LD A,%01111110
-    LD (DE),A
-    INC E
-    LD A,%11100111
-    LD (DE),A
-    INC E
-    LD A,%01111110
-    LD (DE),A
+    INC HL
+    LD (HL),A
+    INC HL
+    LD (HL),A
+    INC B
+    CALL Coor_Atrib
+    LD (HL),A
+    INC HL
+    LD (HL),A
+    INC HL
+    LD (HL),A
 
     RET
 
