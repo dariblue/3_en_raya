@@ -11,41 +11,28 @@ DrawBoard:
     LD DE, $4000  ; Dirección de pantalla en ZX Spectrum
     LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes) tamaño pantalla ZX Spectrum
     LDIR 
-
+    
     ; Pintar ficha inicial del jugador activo usando overlay full-screen
     CALL Piececita
     RET
 
-Coord_Atrib:
-    ; Entrada: H = fila (0..23), L = columna (0..31)
-    ; Salida:  HL = $5800 + fila*32 + columna, A = atributo (tomado de D)
-    LD C, L        ; guardar columna
-    LD L, H        ; L := fila
-    LD H, 0
-    ; desplazar HL << 5 (multiplicar por 32) usando SLA/ RL (5 veces)
-    SLA L
-    RL  H
-    SLA L
-    RL  H
-    SLA L
-    RL  H
-    SLA L
-    RL  H
-    SLA L
-    RL  H
-    ; insertar columna en los 5 bits bajos
-    LD A, L
-    OR C
-    LD L, A
-    ; añadir base $5800 (H es pequeño, OR es válido)
-    LD A, H
-    OR $58
-    LD H, A
+Coord_Atrib: ; Copiado del de bienvenida.asm
+    PUSH AF             ; Guardamos A en el stack
+    PUSH BC             ; Guardamos BC en el stack
+    LD A, D 
+    LD H,B              ; Los bits 4,5 de B deben ser los bits 0,1 de H
+    SRL H : SRL H : SRL H
+    LD A,B              ; Los bits 0,1,2 de B deben ser los bits 5,6,7 de L
+    SLA A : SLA A : SLA A : SLA A : SLA A
+    OR C                ; Y C son los bits 0-4 de L
+    LD L,A
+    LD BC, $5800        ; Le sumamos la dirección de comienzo de los atributos
+    ADD HL,BC
+    POP BC              ; Restauramos los valores del stack
+    POP AF
 
-    ; preparar atributo en A usando D (ink 0..7). Quitando BRIGHT para evitar colores raros.
-    LD A, D
-    AND 7
     RET
+
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
 GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
@@ -53,11 +40,18 @@ GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), camb
 
 ;TODO rutina de esperar tecla (bienvenida tiene una similar)
 
+;TODO rutina leer F en el chat
+F_in_d_Chat:
+
+    RET
+
+
 Piececita:
     ; Pintar ficha en fila=2, col=2 usando atributo que deja Coord_Atrib (lee D para color)
-    LD H, 2
-    LD L, 2
-    CALL Coord_Atrib   ; HL -> addr atributo, A <- (D & 7)
+    LD B, 2
+    LD C, 2
+    
+    CALL Coord_Atrib   ; HL -> addr atributo (Coord_Atrib preserva AF), D tiene color
     LD (HL), A
     INC HL
     LD (HL), A
@@ -65,15 +59,13 @@ Piececita:
     LD (HL), A
 
     ; atributos en la fila inferior de la celda (fila+1)
-    LD H, 3
-    LD L, 2
+    INC B
     CALL Coord_Atrib
     LD (HL), A
     INC HL
     LD (HL), A
     INC HL
     LD (HL), A
-
     RET
 
 ; Etiqueta del recurso binario del tablero (archivo .scr)
