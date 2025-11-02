@@ -68,3 +68,4 @@ Piececita:
 tablerito: INCBIN "tablerito.scr"
 
 
+; PITTOS DE JUEGO
