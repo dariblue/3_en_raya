@@ -11,6 +11,7 @@
     - [X] fichas de 2x3
 ### Dibujar la ficha Inicial
     - [X] 1ºcolumna 1ºcolor
+    - [ ] lee que pulsamos W o Q
     - [ ] mover la pieza derecha (W) e izquierda (Q)
     - [ ] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
     - [ ] F -> simula fin de la partida
