@@ -2,7 +2,7 @@
 Juego:
     CALL DrawBoard
     
-    CALL GameLoop
+    CALL Tecla2
     RET
 
 ; Dibuja el tablero inicial (tablerito.scr) y la ficha del jugador activo
@@ -41,8 +41,32 @@ GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), camb
 ;TODO rutina de esperar tecla (bienvenida tiene una similar)
 
 ;TODO rutina leer F en el chat
-F_in_d_Chat:
+Tecla2:                ; Rutina para leer del teclado 'S' o 'N'
+    PUSH BC             ; BC al stack para preservar su valor
 
+T2_F:            
+    LD BC,$FDFE         ; Escanear línea G,F,D,S,A
+    IN A,(C)
+    BIT 3,A
+    JR NZ,T2_INTRO           ; No han pulsado 'F'
+    LD A,'F'
+    
+T2_INTRO:     
+    LD BC,$BFFE         ; Escanear línea H J K L ENTER
+    IN A,(C)
+    BIT 0,A
+    JR NZ,T2_F      ; No han pulsado Intro
+    LD A,"INTRO"
+
+T2_S:     
+    LD (Caracter),A     ; Guardo 'F' en la Variable Caracter
+
+Soltar_Tecla2:           ; Rutina de espera hasta que se suelta la tecla
+    IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
+    AND $1F
+    CP $1F              ; Comprobar que no hay tecla pulsada
+    JR NZ,Soltar_Tecla2  ; esperar hasta que no haya tecla pulsada
+    POP BC              ; Recuperamos el valor de BC
     RET
 
 
