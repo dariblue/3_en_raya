@@ -10,11 +10,12 @@
 ### Dibujar el tablero (6x7)
     - [X] fichas de 2x3
 ### Dibujar la ficha Inicial
-    - [X] 1ºcolumna 1ºcolor
-    - [ ] lee que pulsamos W o Q
+    - [x] 1ºcolumna 1ºcolor
+    - [ ] Hacer bien la ficha con el color del jugador
+    - [x] lee que pulsamos W o Q
     - [ ] mover la pieza derecha (W) e izquierda (Q)
-    - [ ] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
-    - [ ] F -> simula fin de la partida
+    - [x] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
+    - [x] F -> simula fin de la partida
 ### DONE. Dibujar Pantalla Final:
     - [x] mostrar mensaje de fin de partida
     - [x] preguntar si quiere otra partida de forma funcional (en caso de que si inicializar la siguiente partida) (TODO redirigir)

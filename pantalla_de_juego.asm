@@ -4,6 +4,7 @@ Juego:
     
     CALL Tecla2
 
+
     ; Comprobar si se pulsó 'Q' (ziquierda)
     LD A,(Caracter2)
     CP 'Q'
@@ -57,6 +58,7 @@ T2_Q:
     BIT 0,A
     JR NZ,T2_W           ; No han pulsado 'Q'
     LD A,'Q'
+    CALL T2_S
 
 T2_W:            
     LD BC,$FBFE         ; Escanear línea T, R, E, W, Q
@@ -64,13 +66,15 @@ T2_W:
     BIT 1,A
     JR NZ,T2_INTRO           ; No han pulsado 'W'
     LD A,'W'
-    
+    CALL T2_S  
+
 T2_INTRO:     
     LD BC,$BFFE         ; Escanear línea H J K L ENTER
     IN A,(C)
     BIT 0,A
     JR NZ,T2_F      ; No han pulsado Intro
     LD A,"E"
+    CALL T2_S  
 
 T2_F:            
     LD BC,$FDFE         ; Escanear línea G,F,D,S,A
@@ -78,6 +82,7 @@ T2_F:
     BIT 3,A
     JR NZ, T2_Q           ; No han pulsado 'F'
     LD A,'F'
+    CALL T2_S 
 
 T2_S:     
     LD (Caracter2),A     ; Guardo 'F' en la Variable Caracter2
@@ -95,12 +100,15 @@ Soltar_Tecla2:           ; Rutina de espera hasta que se suelta la tecla
 segunda_lectura:
     LD A,(Caracter2)
     CP 'W' 
+
     JR NZ, tercera_lectura   ; Si no es 'W', comprueba que sea 'ENTER'
 
 tercera_lectura:
     LD A,(Caracter2)
     CP "E"
     JR NZ, fin_juego       ; Si no es 'ENTER', asume q es F y termina el juego
+    CALL cambiar_jugapuertas
+    CALL Tecla2
 
 fin_juego:
     CALL CLEARSCR   ; Borrar pantalla
