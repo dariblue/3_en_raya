@@ -10,7 +10,7 @@
 ### Dibujar el tablero (6x7)
     - [X] fichas de 2x3
 ### Dibujar la ficha Inicial
-    - [ ] 1ºcolumna 1ºcolor
+    - [X] 1ºcolumna 1ºcolor
     - [ ] mover la pieza derecha (W) e izquierda (Q)
     - [ ] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
     - [ ] F -> simula fin de la partida
