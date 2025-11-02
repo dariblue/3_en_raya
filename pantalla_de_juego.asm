@@ -17,7 +17,7 @@ DrawBoard:
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
 GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
-    RET
+    JP GameLoop  ; Bucle infinito por ahora
 
 ;TODO rutina de esperar tecla (bienvenida tiene una similar)
 
@@ -26,8 +26,8 @@ Piececita:
 
     ; Poner el atributo (color) de la ficha
     LD A,D        ; cargar color desde la variable/etiqueta D (como tenías)
-    LD B,12
-    LD C,15
+    LD B,2
+    LD C,2
     CALL Coor_Atrib  ; HL = dirección del atributo
     LD (HL),A        ; escribir color
 
