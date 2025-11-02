@@ -22,10 +22,10 @@ Despedida:
     LD A,1+$80      ; Azul parpadeante
     LD B,20         ; Buscamos la dirección del atributo de coordenadas 20,30
     LD C,30         ; Para poner el cursor
-    CALL Coor_Atrib2 ; Esta rutina devuelve en HL la dirección del atributo
+    CALL Coor_Atrib ; Esta rutina devuelve en HL la dirección del atributo
     LD (HL),A       ; Pongo el atributo
 
-    CALL Teclado2    ; Leo el teclado hasta que pulsen S o N
+    CALL Teclado    ; Leo el teclado hasta que pulsen S o N
 
     LD A,1          ; Eco de la tecla pulsada
     LD B,20
@@ -63,49 +63,8 @@ fin_despedida: ;Va a juegar de nuevo
     CALL CLEARSCR   ; Borrar pantalla
     CALL Inicializar ; Llamar a la rutina de inicialización
 
-Coor_Atrib2:
-    ; Rutina que recibe en B,C las coordenadas de la pantalla (fila, columna)
-    ; y devuelve en HL la dirección del atributo correspondiente
-    PUSH AF             ; Guardamos A en el stack
-    PUSH BC             ; Guardamos BC en el stack
-    LD H,b              ; Los bits 4,5 de B deben ser los bits 0,1 de H
-    SRL H : SRL H : SRL H
-    LD A,B              ; Los bits 0,1,2 de B deben ser los bits 5,6,7 de L
-    SLA A : SLA A : SLA A : SLA A : SLA a
-    OR c                ; Y C son los bits 0-4 de L
-    LD L,A
-    LD BC, $5800        ; Le sumamos la dirección de comienzo de los atributos
-    ADD HL,BC
-    POP BC              ; Restauramos los valores del stack
-    POP AF
-    RET
 
-Teclado2:                ; Rutina para leer del teclado 'S' o 'N'
-    PUSH BC             ; BC al stack para preservar su valor
-T_N2:
-    LD BC,$7FFE         ; Escanear línea B,N,M,SYMB,Space
-    IN A,(C)
-    BIT 3,A
-    JR NZ,T_S2           ; Han pulsado N
-    LD A,'N'
-    
-    JR T_F2
-T_S2:            
-    LD BC,$FDFE         ; Escanear línea G,F,D,S,A
-    IN A,(C)
-    BIT 1,A
-    JR NZ,T_N2           ; No han pulsado 'S'
-    LD A,'S'
-T_F2:     
-    LD (Caracter_final),A     ; Guardo 'S' o 'N' en la Variable Caracter 
-    
-Soltar_Tecla2:           ; Rutina de espera hasta que se suelta la tecla
-    IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
-    AND $1F
-    CP $1F              ; Comprobar que no hay tecla pulsada
-    JR NZ,Soltar_Tecla2  ; esperar hasta que no haya tecla pulsada
-    POP BC              ; Recuperamos el valor de BC
-    RET
+
 
 Titulo_final:    db "Partida epiquisima bro",0    ; Título
 Mensaje_final:   db "Quieres jugar de nuevo (S/N)? ",0   ; Mensaje inicial
