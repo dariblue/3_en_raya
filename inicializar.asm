@@ -18,7 +18,7 @@ inic_jugadores:
     LD D, 6      ; color ficha J2 = 6 (amarillo)
     LD E, 2      ; nº jugador2 = 2
 
-    EXX          ; volver a registros primarios: DE contiene J1, (DE)' contiene J2
+    ; EXX          ; volver a registros primarios: DE contiene J1, (DE)' contiene J2
     RET
 
 ; Cambia el jugador activo (primario <-> secundario)

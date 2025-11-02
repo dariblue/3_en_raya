@@ -53,7 +53,7 @@ Bienvenida:
     ; Comprobar si se pulsó 'N'
     LD A,(Caracter)
     CP 'N'
-    JR NZ, fin_bienvenida   ; Si no es 'N', salir
+    JR NZ, fin_bienvenida   ; Si no es 'N', Ir al juego
 
     ; Si es 'N', mostrar mensaje de despedida
     LD A,4          ; Color verde
