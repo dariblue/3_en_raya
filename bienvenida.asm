@@ -86,36 +86,8 @@ Coor_Atrib:
     POP AF
     RET
 
-Teclado:                ; Rutina para leer del teclado 'S' o 'N'
-    PUSH BC             ; BC al stack para preservar su valor
-T_N:
-    LD BC,$7FFE         ; Escanear línea B,N,M,SYMB,Space
-    IN A,(C)
-    BIT 3,A
-    JR NZ,T_S           ; Han pulsado N
-    LD A,'N'
-    
-    JR T_F
-T_S:            
-    LD BC,$FDFE         ; Escanear línea G,F,D,S,A
-    IN A,(C)
-    BIT 1,A
-    JR NZ,T_N           ; No han pulsado 'S'
-    LD A,'S'
-T_F:     
-    LD (Caracter),A     ; Guardo 'S' o 'N' en la Variable Caracter 
-
-Soltar_Tecla:           ; Rutina de espera hasta que se suelta la tecla
-    IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
-    AND $1F
-    CP $1F              ; Comprobar que no hay tecla pulsada
-    JR NZ,Soltar_Tecla  ; esperar hasta que no haya tecla pulsada
-    POP BC              ; Recuperamos el valor de BC
-    RET
-
 Titulo:    db "Bienvenido al Conecta 4",0    ; Título
 Mensaje:   db "Empezamos una partida (S/N)? ",0   ; Mensaje inicial
-Respuesta: db "Has contestado: ",0      ; Mensaje con la respuesta
-Caracter:  db 0,0              ; Mensaje del carácter para imprimir
+Respuesta: db "Has contestado: ", 0      ; Mensaje con la respuesta
 Adios:     db "Gracias por jugar. Adios!",0 ; Mensaje de despedida
 XD:        INCBIN "elreal.scr"

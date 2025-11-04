@@ -2,15 +2,14 @@
 Juego:
     CALL DrawBoard
     
-    CALL Tecla2
+    CALL Teclado      ; Llamar a la rutina de lectura de tecla
 
 
     ; Comprobar si se pulsó 'Q' (ziquierda)
-    LD A,(Caracter2)
+    LD A,(Caracter)
     CP 'Q'
     JR NZ, segunda_lectura   ; Si no es 'Q', comprueba que sea 'W'
     ; TODO Funcionalidad de mover la ficha a la izquierda
-
 
     
     RET
@@ -49,68 +48,20 @@ Coord_Atrib: ; Copiado del de bienvenida.asm
 GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
     JP GameLoop  ; Bucle infinito por ahora
 
-
-Tecla2:                ; Rutina para leer del teclado 'S' o 'N'
-    PUSH BC             ; BC al stack para preservar su valor
-
-T2_Q:            
-    LD BC,$FBFE         ; Escanear línea T, R, E, W, Q
-    IN A,(C)
-    BIT 0,A
-    JR NZ,T2_W           ; No han pulsado 'Q'
-    LD A,'Q'
-    CALL T2_S
-
-T2_W:            
-    LD BC,$FBFE         ; Escanear línea T, R, E, W, Q
-    IN A,(C)
-    BIT 1,A
-    JR NZ,T2_INTRO           ; No han pulsado 'W'
-    LD A,'W'
-    CALL T2_S  
-
-T2_INTRO:     
-    LD BC,$BFFE         ; Escanear línea H J K L ENTER
-    IN A,(C)
-    BIT 0,A
-    JR NZ,T2_F      ; No han pulsado Intro
-    LD A,"E"
-    CALL T2_S  
-
-T2_F:            
-    LD BC,$FDFE         ; Escanear línea G,F,D,S,A
-    IN A,(C)
-    BIT 3,A
-    JR NZ, T2_Q           ; No han pulsado 'F'
-    LD A,'F'
-    CALL T2_S 
-
-T2_S:     
-    LD (Caracter2),A     ; Guardo 'F' en la Variable Caracter2
-
-Soltar_Tecla2:           ; Rutina de espera hasta que se suelta la tecla
-    IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
-    AND $1F
-    CP $1F              ; Comprobar que no hay tecla pulsada
-    JR NZ,Soltar_Tecla2  ; esperar hasta que no haya tecla pulsada
-    POP BC              ; Recuperamos el valor de BC
-    RET
-
-
 ; Lectura de la tecla pulsada y acción correspondiente
 segunda_lectura:
-    LD A,(Caracter2)
+    LD A,(Caracter)
     CP 'W' 
 
     JR NZ, tercera_lectura   ; Si no es 'W', comprueba que sea 'ENTER'
     ; TODO Funcionalidad de mover la ficha a la derecha
 
 tercera_lectura:
-    LD A,(Caracter2)
+    LD A,(Caracter)
     CP "E"
     JR NZ, fin_juego       ; Si no es 'ENTER', asume q es F y termina el juego
     CALL cambiar_jugapuertas
-    CALL Tecla2
+    CALL Teclado
 
 fin_juego:
     CALL CLEARSCR   ; Borrar pantalla
@@ -142,7 +93,6 @@ Piececita:
 
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr"
-Caracter2:  db 0,0  ; Mensaje del carácter para imprimir
 
 
 

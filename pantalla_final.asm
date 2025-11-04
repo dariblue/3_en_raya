@@ -30,7 +30,7 @@ Despedida:
     LD A,1          ; Eco de la tecla pulsada
     LD B,20
     LD C,30
-    LD IX,Caracter_final
+    LD IX,Caracter
     CALL PRINTAT
 
     CALL CLEARSCR       ; Borrar pantalla
@@ -43,11 +43,11 @@ Despedida:
     LD A,4
     LD B,18
     LD C,17
-    LD IX,Caracter_final
+    LD IX,Caracter
     CALL PRINTAT
 
     ; Comprobar si se pulsó 'N'
-    LD A,(Caracter_final)
+    LD A,(Caracter)
     CP 'N'
     JR NZ, fin_despedida   ; Si no es 'N', inicializar el juego de nuevo
 
@@ -69,5 +69,4 @@ fin_despedida: ;Va a juegar de nuevo
 Titulo_final:    db "Partida epiquisima bro",0    ; Título
 Mensaje_final:   db "Quieres jugar de nuevo (S/N)? ",0   ; Mensaje inicial
 Respuesta_final: db "Has contestado: ",0      ; Mensaje con la respuesta
-Caracter_final:  db 0,0              ; Mensaje del carácter para imprimir
 Adios_final:     db "Gracias por jugar. Adios!",0 ; Mensaje de despedida
