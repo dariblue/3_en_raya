@@ -21,13 +21,14 @@ DrawBoard:
     LDIR 
     
     ; Pintar ficha inicial del jugador activo usando overlay full-screen
+    LD A, 5*8
     CALL Piececita
     RET
 
 Coord_Atrib: ; Copiado del de bienvenida.asm
     PUSH AF             ; Guardamos A en el stack
     PUSH BC             ; Guardamos BC en el stack
-    LD A, D 
+    ;LD A, D 
     LD H,B              ; Los bits 4,5 de B deben ser los bits 0,1 de H
     SRL H : SRL H : SRL H
     LD A,B              ; Los bits 0,1,2 de B deben ser los bits 5,6,7 de L
