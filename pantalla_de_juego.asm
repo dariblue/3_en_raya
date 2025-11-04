@@ -9,6 +9,8 @@ Juego:
     LD A,(Caracter2)
     CP 'Q'
     JR NZ, segunda_lectura   ; Si no es 'Q', comprueba que sea 'W'
+    ; TODO Funcionalidad de mover la ficha a la izquierda
+
 
     
     RET
@@ -41,15 +43,13 @@ Coord_Atrib: ; Copiado del de bienvenida.asm
     POP AF
 
     RET
-
+    ; TODO: Modificar para que el color venga en D
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
 GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
     JP GameLoop  ; Bucle infinito por ahora
 
 
-
-;TODO rutina de esperar tecla (bienvenida tiene una similar)
 Tecla2:                ; Rutina para leer del teclado 'S' o 'N'
     PUSH BC             ; BC al stack para preservar su valor
 
@@ -103,6 +103,7 @@ segunda_lectura:
     CP 'W' 
 
     JR NZ, tercera_lectura   ; Si no es 'W', comprueba que sea 'ENTER'
+    ; TODO Funcionalidad de mover la ficha a la derecha
 
 tercera_lectura:
     LD A,(Caracter2)
@@ -137,10 +138,11 @@ Piececita:
     INC HL
     LD (HL), A
     RET
+    ;TODO Pintar bien la piececita segun el jugador activo (color en D)
 
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr"
-Caracter2:  db 0,0              ; Mensaje del carácter para imprimir
+Caracter2:  db 0,0  ; Mensaje del carácter para imprimir
 
 
 

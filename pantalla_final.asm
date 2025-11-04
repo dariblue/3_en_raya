@@ -49,7 +49,7 @@ Despedida:
     ; Comprobar si se pulsó 'N'
     LD A,(Caracter_final)
     CP 'N'
-    JR NZ, fin_despedida   ; Si no es 'N', si es 'S', ir a juego
+    JR NZ, fin_despedida   ; Si no es 'N', inicializar el juego de nuevo
 
     ; Si es 'N', mostrar mensaje de despedida
     LD A,4          ; Color verde
