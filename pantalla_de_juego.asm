@@ -1,16 +1,7 @@
 ; Rutina de juego
 Juego:
     CALL DrawBoard
-    
     CALL Teclado      ; Llamar a la rutina de lectura de tecla
-
-
-    ; Comprobar si se pulsó 'Q' (ziquierda)
-    LD A,(Caracter)
-    CP 'Q'
-    JR NZ, segunda_lectura   ; Si no es 'Q', comprueba que sea 'W'
-    ; TODO Funcionalidad de mover la ficha a la izquierda
-
     
     RET
 
@@ -26,7 +17,7 @@ DrawBoard:
     CALL Piececita
     RET
 
-Coord_Atrib: ; Copiado del de bienvenida.asm
+Coord_Atrib: ; Copiado del de bienvenida.asm ;TODO: pasar a mannin.asm
     PUSH AF             ; Guardamos A en el stack
     PUSH BC             ; Guardamos BC en el stack
     ;LD A, D 
@@ -48,20 +39,10 @@ Coord_Atrib: ; Copiado del de bienvenida.asm
 GameLoop: ; TODO (codigo de lectura de tecla pulsada y soltada (enter y F), cambio de jugador y mover/borrar/pintar ficha)
     JP GameLoop  ; Bucle infinito por ahora
 
-; Lectura de la tecla pulsada y acción correspondiente
-segunda_lectura:
-    LD A,(Caracter)
-    CP 'W' 
-
-    JR NZ, tercera_lectura   ; Si no es 'W', comprueba que sea 'ENTER'
-    ; TODO Funcionalidad de mover la ficha a la derecha
-
-tercera_lectura:
-    LD A,(Caracter)
-    CP "E"
-    JR NZ, fin_juego       ; Si no es 'ENTER', asume q es F y termina el juego
-    CALL cambiar_jugapuertas
-    CALL Teclado
+mover_dcha:
+    RET
+mover_izq:
+    RET
 
 fin_juego:
     CALL CLEARSCR   ; Borrar pantalla

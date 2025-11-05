@@ -51,8 +51,7 @@ T_F:
     JR T_Save
 
 T_Save:     
-    LD (Caracter),A     ; Guardo 'F' en la Variable Caracter
-
+    LD (Caracter),A     ; Guardar el carácter pulsado en la variable Caracter
 
 Soltar_Tecla:           ; Rutina de espera hasta que se suelta la tecla
     IN A,(C)            ; Leer del puerto que se ha definido en Lee_Tecla
@@ -60,7 +59,23 @@ Soltar_Tecla:           ; Rutina de espera hasta que se suelta la tecla
     CP $1F              ; Comprobar que no hay tecla pulsada
     JR NZ,Soltar_Tecla  ; esperar hasta que no haya tecla pulsada
     POP BC              ; Recuperamos el valor de BC
-    RET
 
+T_selected:
+    LD A,(Caracter) ; Cargar el carácter pulsado en A
+    CP 'N' 
+    JP Z, si_o_no 
+    CP 'S'
+    JP Z, si_o_no
+
+    CP 'Q'
+    JP Z, mover_izq
+    CP 'W'
+    JP Z, mover_dcha    
+    CP 'E'
+    JP Z, cambiar_jugapuertas
+    CP 'F'
+    JP Z, fin_juego
 
 Caracter:  db 0,0              ; Mensaje del carácter para imprimir
+
+

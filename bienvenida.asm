@@ -31,6 +31,7 @@ Bienvenida:
 
     CALL Teclado    ; Leo el teclado hasta que pulsen S o N
 
+si_o_no:
     LD A,1          ; Eco de la tecla pulsada
     LD B,21
     LD C,30
@@ -47,7 +48,7 @@ Bienvenida:
     LD A,4
     LD B,18
     LD C,17
-    LD IX,Caracter
+    LD IX, Caracter
     CALL PRINTAT
 
     ; Comprobar si se pulsó 'N'
