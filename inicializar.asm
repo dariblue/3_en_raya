@@ -1,7 +1,6 @@
 ;Codigo previo al juego que inicializa jugadores y llama a la rutina de juego
-Inicializar:
+inicializar:
     CALL inic_jugadores    ; Inicializar jugadores
-    CALL Juego             ; Llamar a la rutina de juego
     RET
 
 ; Inicializa jugadores con valores:
