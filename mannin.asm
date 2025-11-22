@@ -10,7 +10,7 @@ inicio:
 ;Código del estudiante
 
         CALL bienvenida        ; Llamar a la rutina de bienvenida
-        CALL tecladoS_N     ; Esperar tecla S o N
+        CALL tecladoS_N        ; Esperar tecla S o N
         CP 'N'                 ; Comparar con 'N'
         JR Z, fin              ; Si se pulsa N, finalizar el programa
 

@@ -6,7 +6,7 @@ TSN_N:
     LD BC,$7FFE         ; Escanear línea B,N,M,SYMB,Space
     IN A,(C)
     BIT 3,A
-    JR NZ,TSN_S           ; Han pulsado N
+    JR NZ,TSN_S           ; No han pulsado 'N' salta a S
     LD A,'N'
     JR TSN_FIN
 
@@ -14,7 +14,7 @@ TSN_S:
     LD BC,$FDFE         ; Escanear línea G,F,D,S,A
     IN A,(C)
     BIT 1,A
-    JR NZ,TSN_N           ; No han pulsado 'S'
+    JR NZ,TSN_N           ; No han pulsado 'S' salta a N
     LD A,'S'
 
 TSN_FIN:
