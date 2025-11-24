@@ -30,20 +30,20 @@ drawBoard:
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
 gameLoop:
-    CALL tecladoQW_INT_F  ; Leer tecla pulsada
+    CALL tecladoQW_INT_F  ; Leer tecla pulsada (Devuelve en A: 'Q', 'W', 'E', 'F')
     
     ; Verificar qué tecla se pulsó
     CP 'W'
-    JR Z, mover_dcha      ; Si es W, mover a la derecha
+    JP Z, mover_dcha      ; Si es W, mover a la derecha (JP para evitar error de rango)
     
     CP 'Q'
-    JR Z, mover_izq       ; Si es Q, mover a la izquierda
+    JP Z, mover_izq       ; Si es Q, mover a la izquierda
     
     CP 'E'                ; Enter
-    JR Z, cambiar_jugador_y_soltar
+    JP Z, cambiar_jugador_y_soltar
     
     CP 'F'                ; F para finalizar
-    JR Z, fin_juego
+    JP Z, fin_juego
     
     JP gameLoop           ; Continuar el bucle
 
@@ -52,38 +52,65 @@ cambiar_jugador_y_soltar:
     JP gameLoop
 
 mover_dcha:
-    ; Cargar posición actual
+    ; 1. Cargar posición actual
     LD A, (ficha_fila)
     LD H, A
     LD A, (ficha_columna)
     LD L, A
     
-    ; Verificar si podemos mover a la derecha
-    ; El tablero tiene 7 columnas, separadas por COLUMNA_INCREMENTO
+    ; 2. Verificar límite derecho
     LD A, L
-    CP COLUMNA_MAXIMA   ; Verificar si ya estamos en la columna más a la derecha
-    JR Z, gameLoop      ; Si ya estamos al borde derecho, no mover
+    CP COLUMNA_MAXIMA   ; ¿Estamos en la última columna?
+    JP Z, gameLoop      ; Si sí, volver sin hacer nada
     
-    ; Borrar la ficha en la posición actual
+    ; 3. BORRAR ficha actual (Pintar de negro)
     CALL borrar_ficha
     
-    ; Incrementar columna (pasar a la siguiente columna del tablero)
-    LD A, L
+    ; 4. Calcular nueva posición
+    LD A, (ficha_columna)
     ADD A, COLUMNA_INCREMENTO
-    LD L, A
+    LD (ficha_columna), A   ; Guardar nueva columna
+    LD L, A                 ; Actualizar L para pintar
     
-    ; Guardar la nueva columna (fila no cambia en movimiento horizontal)
-    LD (ficha_columna), A
-    
-    ; Dibujar la ficha en la nueva posición
-    LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (TODO: usar color del jugador activo)
+    ; 5. PINTAR ficha nueva (Color del jugador)
+    LD H, 2                 ; Fila siempre 2
+    LD D, COLOR_JUGADOR_1   ; TODO: Usar variable de jugador activo
     CALL dibujar_ficha
     
     JP gameLoop
 
 mover_izq:
-    ; TODO: Implementar movimiento a la izquierda
+    ; 1. Cargar posición actual
+    LD A, (ficha_fila)
+    LD H, A
+    LD A, (ficha_columna)
+    LD L, A
+    
+    ; 2. Verificar límite izquierdo
+    LD A, L
+    CP COLUMNA_INICIAL  ; ¿Estamos en la primera columna?
+    JP Z, gameLoop      ; Si sí, volver sin hacer nada
+    
+    ; 3. BORRAR ficha actual
+    CALL borrar_ficha
+    
+    ; 4. Calcular nueva posición
+    LD A, (ficha_columna)
+    SUB COLUMNA_INCREMENTO
+    LD (ficha_columna), A   ; Guardar nueva columna
+    LD L, A                 ; Actualizar L para pintar
+    
+    ; 5. PINTAR ficha nueva
+    LD H, 2
+    LD D, COLOR_JUGADOR_1
+    CALL dibujar_ficha
+    
     JP gameLoop
+
+borrar_ficha:
+    LD D, 0             ; Color 0 (Negro/Borrar)
+    CALL dibujar_ficha
+    RET
 
 fin_juego:
     CALL CLEARSCR   ; Borrar pantalla

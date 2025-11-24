@@ -34,6 +34,8 @@ T_F:
     LD A,'F'
 
 T_FIN:
-    CALL Soltar_Tecla2   ; Esperar a que se suelte la tecla
+    PUSH AF             ; Guardamos el código de la tecla (A)
+    CALL Soltar_Tecla2  ; Esperar a que se suelte la tecla (destruye A)
+    POP AF              ; Recuperamos el código de la tecla
     POP BC              ; Recuperar BC del stack
     RET
