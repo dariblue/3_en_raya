@@ -12,9 +12,9 @@ drawBoard:
     LDIR 
     
     ; Pintar ficha inicial del jugador activo encima de la primera columna
-    ; Coordenadas: Fila 2, Columna 2 (Ajustado para pegar al tablero)
-    LD H, 2             ; Fila 2
-    LD L, 2             ; Columna 2
+    ; Coordenadas: Fila 2, Columna inicial (Ajustado para pegar al tablero)
+    LD H, 2                 ; Fila 2
+    LD L, COLUMNA_INICIAL   ; Columna inicial
     
     ; Guardar la posición inicial
     LD A, H
@@ -61,17 +61,16 @@ mover_dcha:
     ; Verificar si podemos mover a la derecha
     ; Tablero tiene 7 columnas, cada columna ocupa 4 caracteres (3 de ficha + 1 de borde)
     ; Columnas válidas: 2, 6, 10, 14, 18, 22, 26
-    ; Posición máxima para la columna izquierda de la ficha: 26
     LD A, L
-    CP 26               ; Verificar si ya estamos en la columna más a la derecha
+    CP COLUMNA_MAXIMA   ; Verificar si ya estamos en la columna más a la derecha
     JP Z, gameLoop      ; Si ya estamos al borde derecho, no mover
     
     ; Borrar la ficha en la posición actual
     CALL borrar_ficha
     
-    ; Incrementar columna en 4 (pasar a la siguiente columna del tablero)
+    ; Incrementar columna (pasar a la siguiente columna del tablero)
     LD A, L
-    ADD A, 4
+    ADD A, COLUMNA_INCREMENTO
     LD L, A
     
     ; Guardar la nueva posición
@@ -94,6 +93,11 @@ fin_juego:
     CALL CLEARSCR   ; Borrar pantalla
     CALL despedida
     ;TODO Pintar bien la piececita segun el jugador activo (color en D)
+
+; Constantes para el tablero
+COLUMNA_INICIAL     EQU 2       ; Primera columna del tablero
+COLUMNA_MAXIMA      EQU 26      ; Última columna del tablero
+COLUMNA_INCREMENTO  EQU 4       ; Incremento entre columnas (3 de ficha + 1 de borde)
 
 ; Variables para la posición de la ficha
 ficha_fila:    DB 0
