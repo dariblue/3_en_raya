@@ -49,7 +49,7 @@ borrar_ficha:
     PUSH DE
     PUSH HL
 
-    LD D, $07           ; Color de fondo (blanco sobre negro)
+    LD D, COLOR_FONDO   ; Color de fondo del tablero
     LD B, 2             ; Altura de la ficha = 2 filas
 
 bucle_alto_borrar:

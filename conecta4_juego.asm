@@ -98,6 +98,7 @@ COLUMNA_MAXIMA      EQU COLUMNA_INICIAL + (6 * COLUMNA_INCREMENTO)  ; Última co
 ; Constantes de color
 COLOR_JUGADOR_1     EQU $10     ; Color rojo para jugador 1
 COLOR_JUGADOR_2     EQU $30     ; Color amarillo para jugador 2
+COLOR_FONDO         EQU $07     ; Color de fondo del tablero (blanco sobre negro)
 
 ; Variables para la posición de la ficha
 ficha_fila:    DB 0
