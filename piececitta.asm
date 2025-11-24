@@ -1,46 +1,41 @@
-piececita:
-    ; Pintar ficha en fila=2, col=2 usando atributo que deja coord_Atrib (lee D para color)
-    LD B, 2
-    LD C, 2
+; Rutina para dibujar una ficha de 2x3
+; Entrada: 
+;   H = Fila superior
+;   L = Columna izquierda
+;   D = Atributo de color (ej: $10 para rojo, $30 para amarillo)
+dibujar_ficha:
+    PUSH BC
+    PUSH DE
+    PUSH HL
 
-    CALL coord_Atrib   ; HL -> addr atributo (coord_Atrib preserva AF), D tiene color
-    LD (HL), A
-    INC HL
-    LD (HL), A
-    INC HL
-    LD (HL), A
+    LD B, 2             ; Altura de la ficha = 2 filas
 
-    ; atributos en la fila inferior de la celda (fila+1)
-    ;INC B
-    ;CALL Coord_Atrib
-    LD E, 30
-    LD D, 0
-    add HL, DE
-    LD (HL), A
-    INC HL
-    LD (HL), A
-    INC HL
-    LD (HL), A
+bucle_alto:
+    PUSH HL             ; Guardamos la coordenada de inicio de la fila actual
+    PUSH BC             ; Guardamos el contador de altura
+
+    LD B, 3             ; Anchura de la ficha = 3 columnas
+
+bucle_ancho:
+    PUSH HL             ; Guardamos las coordenadas (H,L) antes de que coord_Atrib las machaque
+    PUSH BC             ; Guardamos el contador de anchura
+
+    CALL coord_Atrib    ; Calcula dirección de atributos en HL
+    LD (HL), D          ; Pinta el atributo
+
+    POP BC              ; Recuperamos contador ancho
+    POP HL              ; Recuperamos coordenadas (H,L)
+
+    INC L               ; Siguiente columna a la derecha
+    DJNZ bucle_ancho    ; Repetimos 3 veces
+
+    POP BC              ; Recuperamos contador altura
+    POP HL              ; Recuperamos el inicio de la fila
+
+    INC H               ; Bajamos a la siguiente fila
+    DJNZ bucle_alto     ; Repetimos 2 veces
+
+    POP HL
+    POP DE
+    POP BC
     RET
-    ; PUSH HL
-    ; LD A, H 
-    ; ADD A, H : ADD A, H
-    ; ADD A, 2
-    ; LD H, A
-    ; LD A, L 
-    ; ADD A, L : ADD A, L : ADD A, L 
-    ; ADD A, 3
-    ; LD L, A
-    ; CALL coord_Atrib
-    ; LD (HL), A
-    ; LD (HL), A : INC HL
-    ; LD (HL), A : INC HL
-    ; LD (HL), A
-    ; LD D, 0
-    ; LD E, 30
-    ; ADD HL, DE
-    ; LD (HL), A : INC HL
-    ; LD (HL), A : INC HL
-    ; LD (HL),A 
-    ; POP HL
-    ; RET

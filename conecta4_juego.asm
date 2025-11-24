@@ -12,8 +12,8 @@ drawBoard:
     LDIR 
     
     ; Pintar ficha inicial del jugador activo encima de la primera columna
-    ; Coordenadas: Fila 0, Columna 2 (Tablero empieza en 2,2)
-    LD H, 0             ; Fila 0
+    ; Coordenadas: Fila 2, Columna 2 (Ajustado para pegar al tablero)
+    LD H, 2             ; Fila 2
     LD L, 2             ; Columna 2
     LD D, $10           ; Color Rojo (Paper 2 = 010 -> 00 010 000 = $10)
     CALL dibujar_ficha
