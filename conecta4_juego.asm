@@ -62,7 +62,7 @@ mover_dcha:
     ; El tablero tiene 7 columnas, separadas por COLUMNA_INCREMENTO
     LD A, L
     CP COLUMNA_MAXIMA   ; Verificar si ya estamos en la columna más a la derecha
-    JP Z, gameLoop      ; Si ya estamos al borde derecho, no mover
+    JR Z, gameLoop      ; Si ya estamos al borde derecho, no mover
     
     ; Borrar la ficha en la posición actual
     CALL borrar_ficha
@@ -72,10 +72,7 @@ mover_dcha:
     ADD A, COLUMNA_INCREMENTO
     LD L, A
     
-    ; Guardar la nueva posición
-    LD A, H
-    LD (ficha_fila), A
-    LD A, L
+    ; Guardar la nueva columna (fila no cambia en movimiento horizontal)
     LD (ficha_columna), A
     
     ; Dibujar la ficha en la nueva posición
@@ -95,8 +92,8 @@ fin_juego:
 
 ; Constantes para el tablero
 COLUMNA_INICIAL     EQU 2       ; Primera columna del tablero
-COLUMNA_MAXIMA      EQU 26      ; Última columna del tablero
 COLUMNA_INCREMENTO  EQU 4       ; Incremento entre columnas (3 de ficha + 1 de borde)
+COLUMNA_MAXIMA      EQU COLUMNA_INICIAL + (6 * COLUMNA_INCREMENTO)  ; Última columna (7 columnas: 0-6)
 
 ; Constantes de color
 COLOR_JUGADOR_1     EQU $10     ; Color rojo para jugador 1
