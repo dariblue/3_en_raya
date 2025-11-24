@@ -22,7 +22,7 @@ drawBoard:
     LD A, L
     LD (ficha_columna), A
     
-    LD D, $10           ; Color Rojo (Paper 2 = 010 -> 00 010 000 = $10)
+    LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (rojo)
     CALL dibujar_ficha
     RET
     
@@ -59,8 +59,7 @@ mover_dcha:
     LD L, A
     
     ; Verificar si podemos mover a la derecha
-    ; Tablero tiene 7 columnas, cada columna ocupa 4 caracteres (3 de ficha + 1 de borde)
-    ; Columnas válidas: 2, 6, 10, 14, 18, 22, 26
+    ; El tablero tiene 7 columnas, separadas por COLUMNA_INCREMENTO
     LD A, L
     CP COLUMNA_MAXIMA   ; Verificar si ya estamos en la columna más a la derecha
     JP Z, gameLoop      ; Si ya estamos al borde derecho, no mover
@@ -80,7 +79,7 @@ mover_dcha:
     LD (ficha_columna), A
     
     ; Dibujar la ficha en la nueva posición
-    LD D, $10           ; Color Rojo (TODO: usar color del jugador activo)
+    LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (TODO: usar color del jugador activo)
     CALL dibujar_ficha
     
     JP gameLoop
@@ -98,6 +97,10 @@ fin_juego:
 COLUMNA_INICIAL     EQU 2       ; Primera columna del tablero
 COLUMNA_MAXIMA      EQU 26      ; Última columna del tablero
 COLUMNA_INCREMENTO  EQU 4       ; Incremento entre columnas (3 de ficha + 1 de borde)
+
+; Constantes de color
+COLOR_JUGADOR_1     EQU $10     ; Color rojo para jugador 1
+COLOR_JUGADOR_2     EQU $30     ; Color amarillo para jugador 2
 
 ; Variables para la posición de la ficha
 ficha_fila:    DB 0
