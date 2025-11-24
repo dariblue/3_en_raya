@@ -1,5 +1,5 @@
         DEVICE ZXSPECTRUM48
-	    SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
+	SLDOPT COMMENT WPMEM, LOGPOINT, ASSETION
         ORG $8000               ; Programa ubicado a partir de $8000 = 32768
 
 inicio:     
@@ -37,4 +37,7 @@ fin2:   JR fin2          ; bucle infinito
         INCLUDE "soltar_tecla.asm"    ; Incluir el código de SOLTAR_TECLA
         INCLUDE "coord_atrib.asm"      ; Incluir el código de CORD_ATRIB
         INCLUDE "piececitta.asm"       ; Incluir el código de PIECECITA
+        INCLUDE "bajar_piececitta.asm" ; Incluir el código de BAJAR_PIECECITA
+
+        
 
