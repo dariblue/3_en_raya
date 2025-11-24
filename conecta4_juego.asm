@@ -15,23 +15,7 @@ drawBoard:
     LD A, 5*8
     CALL piececita
     RET
-
-; Coord_Atrib: ; Copiado del de bienvenida.asm ;TODO: pasar a mannin.asm
-;     PUSH AF             ; Guardamos A en el stack
-;     PUSH BC             ; Guardamos BC en el stack
-;     ;LD A, D 
-;     LD H,B              ; Los bits 4,5 de B deben ser los bits 0,1 de H
-;     SRL H : SRL H : SRL H
-;     LD A,B              ; Los bits 0,1,2 de B deben ser los bits 5,6,7 de L
-;     SLA A : SLA A : SLA A : SLA A : SLA A
-;     OR C                ; Y C son los bits 0-4 de L
-;     LD L,A
-;     LD BC, $5800        ; Le sumamos la dirección de comienzo de los atributos
-;     ADD HL,BC
-;     POP BC              ; Restauramos los valores del stack
-;     POP AF
-
-;     RET
+    
     ; TODO: Modificar para que el color venga en D
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
