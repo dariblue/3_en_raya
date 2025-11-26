@@ -1,6 +1,5 @@
 .vscode
 *.lst
-*.bin
 *.sld
 mannin.bin
 mannin.lst
