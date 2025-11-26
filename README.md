@@ -10,9 +10,9 @@
 - [X] fichas de 2x3
 ### Dibujar la ficha Inicial
 - [x] 1ºcolumna 1ºcolor
-- [ ] Hacer bien la ficha con el color del jugador
+- [x] Hacer bien la ficha con el color del jugador
 - [x] lee que pulsamos W o Q
-- [ ] mover la pieza derecha (W) e izquierda (Q)
+- [x] mover la pieza derecha (W) e izquierda (Q)
 - [x] enter -> ficha del 2º jugador (distinto color) / enter alterna entre jugadores
 - [x] F -> simula fin de la partida
 ### DONE. Dibujar Pantalla Final:
@@ -21,6 +21,10 @@
 
 
 # Cosas a realizar en la entrega 2:
+- [ ] Cambiar teclas de cada jugador
+- [x] Cambiar el color de cada jugador
+- [x] Comprobar que puede bajar columna
+- [x] Simulación caída
 
 
 

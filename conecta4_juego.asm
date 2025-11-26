@@ -83,6 +83,32 @@ cambiar_jugador_y_soltar:
     LD A, (ficha_columna)
     LD L, A                 ; Cargamos la columna visual actual
 
+    ; --- PRIMER PASO: CAER AL TABLERO ---
+    ; La ficha empieza en el "aire" (H=2). La primera casilla real es H=5.
+    ; Bajamos visualmente a la primera casilla (Index 0).
+    CALL borrar_ficha
+    INC H
+    INC H
+    INC H               ; H = 5
+    LD A, (color_jugador)
+    LD D, A
+    CALL dibujar_ficha
+
+    ; Pausa animación inicial
+    PUSH BC
+    LD B, 2
+pausa_ini:
+    PUSH BC
+    LD BC, $1000
+retardo_ini:
+    DEC BC
+    LD A, B
+    OR C
+    JR NZ, retardo_ini
+    POP BC
+    DJNZ pausa_ini
+    POP BC
+
     ; 4. Bucle de Caída (Gravedad con Centinela)
 caida_loop:
     ; Mirar si la casilla lógica de abajo está ocupada (Ficha o Suelo $FF)
