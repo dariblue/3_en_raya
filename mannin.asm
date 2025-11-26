@@ -19,7 +19,7 @@ partida:
         CALL juego
         CALL tecladoS_N     ; Esperar tecla S o N
         CP 'S'                 ; Comparar con 'S'
-        JR Z, partida         ; Si se pulsa S, iniciar una nueva partida
+        JR Z, partida         ; Si se pulsa S, iniciar5 una nueva partida
         
 ;-------------------------------------------------------------------------------------------------
 fin:        

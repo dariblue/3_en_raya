@@ -57,15 +57,16 @@ cambiar_jugador_y_soltar:
     LD C, A             ; C = Índice de columna (0-6)
 
     ; 2. Calcular dirección base de la columna en tablero_logico
-    ; Dirección = tablero_logico + (Columna * 6)
+    ; Dirección = tablero_logico + (Columna * 7)  <-- AHORA SON 7 BYTES
     LD HL, tablero_logico
     LD B, 0
     
-    ; Multiplicar C * 6 (6 filas por columna)
+    ; Multiplicar C * 7
     LD A, C
-    ADD A, C            ; A = C*2
+    ADD A, A            ; A = C*2
     ADD A, C            ; A = C*3
     ADD A, A            ; A = C*6
+    ADD A, C            ; A = C*7
     
     LD C, A
     ADD HL, BC          ; HL apunta ahora al inicio de la columna en memoria lógica
@@ -82,26 +83,13 @@ cambiar_jugador_y_soltar:
     LD A, (ficha_columna)
     LD L, A                 ; Cargamos la columna visual actual
 
-    ; 4. Bucle de Caída (Gravedad)
+    ; 4. Bucle de Caída (Gravedad con Centinela)
 caida_loop:
-    ; Verificar si hemos llegado al fondo
-    ; Fila visual inicial = 2
-    ; Salto por fila = 3 (2 de ficha + 1 de borde)
-    ; Fila 0: 2
-    ; Fila 1: 5
-    ; Fila 2: 8
-    ; Fila 3: 11
-    ; Fila 4: 14
-    ; Fila 5: 17 (Fondo)
-    
-    LD A, H
-    CP 17               ; Fila visual máxima ajustada
-    JR Z, fijar_ficha   ; Si estamos abajo del todo, fijar
-    
-    ; Mirar si la casilla lógica de abajo está ocupada
+    ; Mirar si la casilla lógica de abajo está ocupada (Ficha o Suelo $FF)
+    ; Comprobamos si "a la derecha" (siguiente byte en memoria, IX+1) está libre
     LD A, (IX+1)
     CP 0
-    JR NZ, fijar_ficha  ; Si hay algo abajo, fijar
+    JR NZ, fijar_ficha  ; Si NO es 0 (es ficha o suelo), paramos
 
     ; --- ANIMACIÓN DE BAJADA ---
     
@@ -117,7 +105,7 @@ caida_loop:
     INC IX              ; Avanzamos al siguiente byte en el array
     
     ; D. Pintar en nueva posición
-    LD D, COLOR_JUGADOR_1 ; TODO: Usar variable dinámica
+    LD H, H             ; (Redundante pero aclara) H ya tiene la nueva fila
     LD A, (color_jugador)
     LD D, A
     CALL dibujar_ficha
@@ -141,9 +129,20 @@ bucle_retardo:
 
 fijar_ficha:
     ; Marcar en el tablero lógico que esta casilla está ocupada
-    LD A, (color_jugador) ; Usamos el color como ID de jugador ($10 o $30)
-    LD (IX+0), A
+    ; El jugador rojo dejará un 1 y el jugador amarillo un 2
+    LD A, (color_jugador)
+    CP COLOR_JUGADOR_1
+    JR NZ, guardar_jugador_2
     
+    ; Es Jugador 1 (Rojo)
+    LD (IX+0), 1
+    JR cambiar_turno_proceso
+
+guardar_jugador_2:
+    ; Es Jugador 2 (Amarillo)
+    LD (IX+0), 2
+
+cambiar_turno_proceso:
     ; Cambiar de turno
     LD A, (color_jugador)
     CP COLOR_JUGADOR_1
@@ -252,10 +251,16 @@ ficha_fila:    DB 0
 ficha_columna: DB 0
 color_jugador: DB $10   ; Jugador actual ($10 = Rojo, $30 = Amarillo)
 
-; Tablero Lógico (7 columnas x 6 filas = 42 bytes)
-; Se organiza por columnas: Col 0 (6 bytes), Col 1 (6 bytes)...
-; 0 = Vacío, $10 = Jugador 1, $30 = Jugador 2
-tablero_logico: DS 42, 0
+; Tablero Lógico (7 columnas x 7 filas)
+; 0 = Vacío, $10 = Jugador 1, $30 = Jugador 2, $FF = Suelo/Tope
+tablero_logico:
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 0
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 1
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 2
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 3
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 4
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 5
+    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 6
 
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr"
