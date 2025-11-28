@@ -29,10 +29,10 @@
 
 
 ## Cosas que tenemos que hacer, por prioridas
-- [ ] Implementar la ficha
-- [ ] Hacer que cambie de color
+- [x] Implementar la ficha
+- [x] Hacer que cambie de color
 - [ ] Toda la logica con base en Mannin 
 - [ ] Arreglar la dteccion de teclas
-- [ ] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
-- [ ] Hacer que compruebe si puede bajar una casilla
-- [ ] Funcion de bajar la ficha 
+- [x] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
+- [x] Hacer que compruebe si puede bajar una casilla
+- [x] Funcion de bajar la ficha 
