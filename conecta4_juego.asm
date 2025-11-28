@@ -30,22 +30,47 @@ drawBoard:
 
 ; Bucle principal: espera tecla, cambia jugador y repinta la ficha
 gameLoop:
-    CALL tecladoQW_INT_F  ; Leer tecla pulsada (Devuelve en A: 'Q', 'W', 'E', 'F')
+    CALL tecladoQW_INT_F  ; Leer tecla pulsada (Devuelve en A: Q, W, S, O, P, L, F)
     
-    ; Verificar qué tecla se pulsó
-    CP 'W'
-    JP Z, mover_dcha      ; Si es W, mover a la derecha (JP para evitar error de rango)
+    PUSH AF               ; Guardar tecla para no perderla al comparar color
+    LD A, (color_jugador)
+    CP COLOR_JUGADOR_1
+    JR Z, controles_j1
+    
+    ; --- CONTROLES JUGADOR 2 (Amarillo) ---
+    POP AF                ; Recuperar tecla
+    
+    CP 'O'
+    JP Z, mover_izq       ; O -> Izquierda
+    
+    CP 'P'
+    JP Z, mover_dcha      ; P -> Derecha
+    
+    CP 'L'
+    JP Z, cambiar_jugador_y_soltar ; L -> Soltar
+    
+    CP 'F'
+    JP Z, fin_juego       ; F -> Fin
+    
+    JP gameLoop           ; Tecla no válida para J2, ignorar
+
+controles_j1:
+    ; --- CONTROLES JUGADOR 1 (Rojo) ---
+    POP AF                ; Recuperar tecla
     
     CP 'Q'
-    JP Z, mover_izq       ; Si es Q, mover a la izquierda
+    JP Z, mover_izq       ; Q -> Izquierda
     
-    CP 'E'                ; Enter
-    JP Z, cambiar_jugador_y_soltar
+    CP 'W'
+    JP Z, mover_dcha      ; W -> Derecha
     
-    CP 'F'                ; F para finalizar
-    JP Z, fin_juego
+    CP 'S'
+    JP Z, cambiar_jugador_y_soltar ; S -> Soltar
     
-    JP gameLoop           ; Continuar el bucle
+    CP 'F'
+    JP Z, fin_juego       ; F -> Fin
+    
+    JP gameLoop           ; Tecla no válida para J1, ignorar
 
 cambiar_jugador_y_soltar:
     ; 1. Calcular índice de columna lógica (0-6)
@@ -270,6 +295,7 @@ COLUMNA_MAXIMA      EQU COLUMNA_INICIAL + (6 * COLUMNA_INCREMENTO)  ; Última co
 ; Constantes de color
 COLOR_JUGADOR_1     EQU $10     ; Color rojo para jugador 1
 COLOR_JUGADOR_2     EQU $30     ; Color amarillo para jugador 2
+; aqui el profe hace uno q es coljugador q tiene el color del jugador activo
 COLOR_FONDO         EQU $07     ; Color de fondo del tablero (blanco sobre negro)
 
 ; Variables para la posición de la ficha
