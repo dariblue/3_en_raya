@@ -32,46 +32,37 @@ JugarFicha:
     LD L, A                 ; L = Columna Lógica (0-6)
 
 JF2:
-    ; 1. Pintar Ficha
-    CALL PintarFichaLogica
+    CALL PintarFicha        ; Pinta la ficha en la posición actual (L)
 
-    ; 2. Leer Teclado
     CALL LeerTeclado        ; Devuelve A: -1, 0, 1, $FE
-
-    ; 3. Evaluar
+    
     CP $FE
     JP Z, fin_juego         ; Salida de emergencia
 
     OR A                    ; Comprobar si es 0 (Bajar)
     JP Z, BajarFicha        ; Si A=0, saltar a lógica de caída (JF1)
 
-    ; 4. Movimiento Lateral
-    PUSH AF                 ; Guardar dirección (-1 o 1)
+    ; A tiene la dirección (-1 o 1)
+    ; L tiene la posición actual
     
-    ; Borrar ficha en posición actual (antes de mover)
-    CALL BorrarFichaLogica
-
-    POP AF                  ; Recuperar dirección
+    ADD A, L                ; A = Nueva Posición (Candidata)
     
-    ; 5. Calcular nueva posición
-    ADD A, L                ; A = L + Dirección
+    PUSH AF                 ; Guardamos la nueva posición
+    CALL BorrarFicha        ; Borramos la ficha en la posición vieja (L)
+    POP AF                  ; Recuperamos la nueva posición
     
-    ; 6. Validar Límites (Truco de la pizarra)
-    ; Si A < 7 -> Carry Set (Válido)
-    ; Si A >= 7 (o negativo underflow 255) -> Carry Clear (Inválido)
-    CP 7
-    JR NC, JF2              ; Si no hay carry (inválido), repetir bucle (repinta en sitio viejo)
-
-    ; 7. Actualizar posición
-    LD L, A                 ; L = Nueva columna válida
-    LD (ficha_columna), A   ; Guardar en memoria
+    CP 7                    ; Validar (0 <= A < 7)
+    JR NC, JF2              ; Si es inválido (>=7 o negativo), repetir bucle (L no cambia)
+    
+    LD L, A                 ; Si es válido, actualizar L
+    LD (ficha_columna), A   ; Actualizar memoria
     JR JF2                  ; Repetir bucle
 
-; --- HELPERS DE PINTADO LÓGICO ---
-PintarFichaLogica:
-    PUSH HL                 ; Guardar L lógico
+; --- HELPERS DE PINTADO (Adaptadores Lógico -> Visual) ---
+PintarFicha:
+    PUSH HL
+    PUSH DE
     LD A, L
-    ; Calculo visual inline
     ADD A, A
     ADD A, A
     ADD A, COLUMNA_INICIAL
@@ -80,19 +71,22 @@ PintarFichaLogica:
     LD A, (color_jugador)
     LD D, A
     CALL dibujar_ficha
-    POP HL                  ; Recuperar L lógico
+    POP DE
+    POP HL
     RET
 
-BorrarFichaLogica:
+BorrarFicha:
     PUSH HL
+    PUSH DE
     LD A, L
-    ; Calculo visual inline
     ADD A, A
     ADD A, A
     ADD A, COLUMNA_INICIAL
     LD L, A
     LD H, 2
-    CALL borrar_ficha
+    LD D, 0             ; Color 0 para borrar
+    CALL dibujar_ficha  ; Usamos dibujar_ficha directamente
+    POP DE
     POP HL
     RET
 
