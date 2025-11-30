@@ -31,7 +31,7 @@ fin2:   JR fin2          ; bucle infinito
         INCLUDE "inicializar.asm" ; Incluir el código de inicialización
         INCLUDE "conecta4_juego.asm" ; Incluir el código del juego
         INCLUDE "tecladittoS_N.asm"  ; Incluir el código de espera de tecla S o N
-        INCLUDE "tecladittoQW_INT_F.asm"  ; Incluir el código de espera de tecla Q, W, INTRO, F
+        INCLUDE "tecladitto_Juego.asm"  ; Incluir el código de espera de tecla Q, W, INTRO, F
         INCLUDE "pantalla_final.asm"  ; Incluir el código de despedida
         INCLUDE "printat.asm"         ; Incluir el código de PRINTAT
         INCLUDE "soltar_tecla.asm"    ; Incluir el código de SOLTAR_TECLA
