@@ -10,83 +10,92 @@ drawBoard:
     LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes) tamaño pantalla ZX Spectrum
     LDIR 
     
-    ; Pintar ficha inicial del jugador activo encima de la primera columna
-    ; Coordenadas: Fila 2, Columna inicial (Ajustado para pegar al tablero)
-    LD H, 2                 ; Fila 2
-    LD L, COLUMNA_INICIAL   ; Columna inicial
+    ; Inicializar ficha en columna lógica 0
+    LD A, 0
+    LD (ficha_columna), A   ; Guardamos índice lógico (0-6)
+    LD (ficha_fila), A      ; (No se usa realmente para lógica, pero limpiamos)
     
-    ; Guardar la posición inicial
-    LD A, H
-    LD (ficha_fila), A
-    LD A, L
-    LD (ficha_columna), A
-    
-    LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (rojo)
+    ; Pintar ficha inicial
+    ; Calculo visual inline: (A * 4) + COLUMNA_INICIAL
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
+    LD L, A
+    LD H, 2
+    LD D, COLOR_JUGADOR_1
     CALL dibujar_ficha
     RET
 
-; --- NUEVA RUTINA PRINCIPAL: JugarFicha ---
+; --- NUEVA RUTINA PRINCIPAL: JugarFicha (Adaptada a Pizarra) ---
 JugarFicha:
-    ; 1. Pintar ficha en posición actual
-    LD A, (ficha_fila)
-    LD H, A
     LD A, (ficha_columna)
+    LD L, A                 ; L = Columna Lógica (0-6)
+
+JF2:
+    ; 1. Pintar Ficha (Necesitamos convertir L lógico a visual)
+    PUSH HL                 ; Guardar L lógico
+    LD A, L
+    ; Calculo visual inline
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
     LD L, A
+    LD H, 2
     LD A, (color_jugador)
     LD D, A
     CALL dibujar_ficha
+    POP HL                  ; Recuperar L lógico
 
-    ; 2. Leer Teclado (Devuelve A: -1, 0, 1, $FE)
-    CALL LeerTeclado
+    ; 2. Leer Teclado
+    CALL LeerTeclado        ; Devuelve A: -1, 0, 1, $FE
 
-    ; 3. Evaluar Acción
+    ; 3. Evaluar
     CP $FE
-    JP Z, fin_juego     ; F -> Fin
+    JP Z, fin_juego         ; Salida de emergencia
 
-    CP 0
-    JP Z, BajarFicha    ; 0 -> Bajar
+    OR A                    ; Comprobar si es 0 (Bajar)
+    JP Z, BajarFicha        ; Si A=0, saltar a lógica de caída (JF1)
 
-    CP 1
-    JR Z, mover_derecha ; 1 -> Derecha
-
-    ; Si llega aquí es -1 ($FF) -> Izquierda
-mover_izquierda:
+    ; 4. Movimiento Lateral
+    PUSH AF                 ; Guardar dirección (-1 o 1)
+    
+    ; Borrar ficha en posición actual (antes de mover)
+    PUSH HL
     LD A, L
-    CP COLUMNA_INICIAL
-    JR Z, JugarFicha    ; Tope izquierdo, ignorar
-
-    CALL borrar_ficha   ; Borrar en posición vieja
-    LD A, L
-    SUB 4               ; Mover 4 pixels a la izquierda
+    ; Calculo visual inline
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
     LD L, A
-    LD (ficha_columna), A
-    JR JugarFicha
+    LD H, 2
+    CALL borrar_ficha
+    POP HL
 
-mover_derecha:
-    LD A, L
-    CP COLUMNA_MAXIMA
-    JR Z, JugarFicha    ; Tope derecho, ignorar
+    POP AF                  ; Recuperar dirección
+    
+    ; 5. Calcular nueva posición
+    ADD A, L                ; A = L + Dirección
+    
+    ; 6. Validar Límites (Truco de la pizarra)
+    ; Si A < 7 -> Carry Set (Válido)
+    ; Si A >= 7 (o negativo underflow 255) -> Carry Clear (Inválido)
+    CP 7
+    JR NC, JF2              ; Si no hay carry (inválido), repetir bucle (repinta en sitio viejo)
 
-    CALL borrar_ficha   ; Borrar en posición vieja
-    LD A, L
-    ADD 4               ; Mover 4 pixels a la derecha
-    LD L, A
-    LD (ficha_columna), A
-    JR JugarFicha
+    ; 7. Actualizar posición
+    LD L, A                 ; L = Nueva columna válida
+    LD (ficha_columna), A   ; Guardar en memoria
+    JR JF2                  ; Repetir bucle
 
 ; --- RUTINA DE BAJADA Y LÓGICA ---
 BajarFicha:
-    ; 1. Calcular columna lógica y puntero IX
-    LD A, (ficha_columna)
-    SUB 2
-    SRL A
-    SRL A               ; /4 -> Índice 0-6
-    LD C, A
+    ; 1. Calcular puntero IX (Ahora es más fácil, ya tenemos la columna lógica)
+    LD A, (ficha_columna)   ; A = 0..6
+    LD C, A                 ; C = Columna
     
     LD HL, tablero_logico
     LD B, 0
     ; BC = C * 7
-    LD A, C
     ADD A, A            ; x2
     ADD A, C            ; x3
     ADD A, A            ; x6
@@ -102,15 +111,20 @@ BajarFicha:
     JP NZ, JugarFicha   ; Columna llena, volver a control
 
     ; 3. Primer paso: Caer de Preview (H=2) a Tablero (H=5)
-    LD H, 2
+    ; Borrar de arriba
     LD A, (ficha_columna)
+    ; Calculo visual inline
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
     LD L, A
+    LD H, 2
     CALL borrar_ficha
     
+    ; Pintar en primera casilla
     INC H
     INC H
-    INC H               ; H=5 (Fila 0 Visual)
-    
+    INC H               ; H=5
     LD A, (color_jugador)
     LD D, A
     CALL dibujar_ficha
@@ -137,7 +151,7 @@ bucle_caida:
     JR bucle_caida
 
 colision:
-    ; 5. Fijar ficha en memoria (IX apunta a la casilla libre donde estamos)
+    ; 5. Fijar ficha en memoria
     LD A, (color_jugador)
     CP COLOR_JUGADOR_1
     JR NZ, guardar_j2
@@ -162,9 +176,10 @@ set_j2:
     LD (color_jugador), A
 
 reset_pos:
-    ; Resetear posición visual arriba para el siguiente turno
-    LD A, 2
-    LD (ficha_fila), A
+    ; Resetear posición lógica al centro o inicio (opcional, o dejar donde estaba)
+    ; El profe suele reiniciar en 0 o mantener. Reiniciamos a 0 para consistencia.
+    LD A, 0
+    LD (ficha_columna), A
     JP JugarFicha
 
 pausa_breve:
