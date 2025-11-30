@@ -1,76 +1,84 @@
-tecladoQW_INT_F:
-;Código completo del tecladito para Q, W, S (Jugador 1) y O, P, L (Jugador 2) y F (Fin)
-    PUSH BC             ; BC al stack para preservar su valor
+LeerTeclado:
+; Devuelve en A:
+; -1 ($FF) -> Izquierda
+;  1 ($01) -> Derecha
+;  0 ($00) -> Bajar
+; $FE      -> Fin (F)
 
-teclado_loop:
+    PUSH BC             ; Preservar BC
 
-    ; --- JUGADOR 1 ---
-    ; Q (Izquierda) - Puerto $FBFE, Bit 0
-    LD BC,$FBFE         
-    IN A,(C)
-    BIT 0,A
-    JR NZ,check_W       ; No es Q
-    LD A,'Q'
-    JR T_FIN
+teclado_loop_check:
+    ; Verificar jugador actual
+    LD A, (color_jugador)
+    CP $10              ; ¿Es Jugador 1 (Rojo)?
+    JR Z, check_j1
 
-check_W:
-    ; W (Derecha) - Puerto $FBFE, Bit 1
-    LD BC,$FBFE         
-    IN A,(C)
-    BIT 1,A
-    JR NZ,check_S       ; No es W
-    LD A,'W'
-    JR T_FIN
-
-check_S:
-    ; S (Soltar) - Puerto $FDFE, Bit 1 (A, S, D, F, G)
-    LD BC,$FDFE
-    IN A,(C)
-    BIT 1,A
-    JR NZ,check_O       ; No es S
-    LD A,'S'
-    JR T_FIN
-
-    ; --- JUGADOR 2 ---
-check_O:
-    ; O (Izquierda) - Puerto $DFFE, Bit 1 (P, O, I, U, Y)
+    ; --- JUGADOR 2 (Amarillo) ---
+    ; O (Izquierda)
     LD BC,$DFFE
     IN A,(C)
     BIT 1,A
-    JR NZ,check_P       ; No es O
-    LD A,'O'
-    JR T_FIN
+    JR Z, ret_izq       ; Pulsado O -> Izquierda
 
-check_P:
-    ; P (Derecha) - Puerto $DFFE, Bit 0 (P, O, I, U, Y)
+    ; P (Derecha)
     LD BC,$DFFE
     IN A,(C)
     BIT 0,A
-    JR NZ,check_L       ; No es P
-    LD A,'P'
-    JR T_FIN
+    JR Z, ret_dcha      ; Pulsado P -> Derecha
 
-check_L:
-    ; L (Soltar) - Puerto $BFFE, Bit 1 (Enter, L, K, J, H)
+    ; L (Bajar)
     LD BC,$BFFE
     IN A,(C)
     BIT 1,A
-    JR NZ,check_F       ; No es L
-    LD A,'L'
-    JR T_FIN
+    JR Z, ret_bajar     ; Pulsado L -> Bajar
 
-    ; --- GLOBAL ---
-check_F:
-    ; F (Fin) - Puerto $FDFE, Bit 3 (A, S, D, F, G)
+    JR check_fin        ; Comprobar F
+
+check_j1:
+    ; --- JUGADOR 1 (Rojo) ---
+    ; Q (Izquierda)
+    LD BC,$FBFE         
+    IN A,(C)
+    BIT 0,A
+    JR Z, ret_izq       ; Pulsado Q -> Izquierda
+
+    ; W (Derecha)
+    LD BC,$FBFE         
+    IN A,(C)
+    BIT 1,A
+    JR Z, ret_dcha      ; Pulsado W -> Derecha
+
+    ; S (Bajar)
+    LD BC,$FDFE
+    IN A,(C)
+    BIT 1,A
+    JR Z, ret_bajar     ; Pulsado S -> Bajar
+
+check_fin:
+    ; F (Fin) - Global
     LD BC,$FDFE
     IN A,(C)
     BIT 3,A
-    JR NZ, teclado_loop ; Si no es ninguna, volver a empezar
-    LD A,'F'
+    JR Z, ret_fin
 
-T_FIN:
-    PUSH AF             ; Guardamos el código de la tecla (A)
-    CALL Soltar_Tecla2  ; Esperar a que se suelte la tecla (destruye A)
-    POP AF              ; Recuperamos el código de la tecla
-    POP BC              ; Recuperar BC del stack
+    JR teclado_loop_check ; Esperar hasta que se pulse algo
+
+ret_izq:
+    LD A, $FF           ; -1
+    JR T_SALIDA
+ret_dcha:
+    LD A, 1             ; 1
+    JR T_SALIDA
+ret_bajar:
+    LD A, 0             ; 0
+    JR T_SALIDA
+ret_fin:
+    LD A, $FE           ; Código de fin
+    JR T_SALIDA
+
+T_SALIDA:
+    PUSH AF             ; Guardar resultado
+    CALL Soltar_Tecla2  ; Esperar a soltar
+    POP AF              ; Recuperar resultado
+    POP BC              ; Recuperar BC
     RET
