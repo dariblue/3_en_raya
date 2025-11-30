@@ -32,19 +32,8 @@ JugarFicha:
     LD L, A                 ; L = Columna Lógica (0-6)
 
 JF2:
-    ; 1. Pintar Ficha (Necesitamos convertir L lógico a visual)
-    PUSH HL                 ; Guardar L lógico
-    LD A, L
-    ; Calculo visual inline
-    ADD A, A
-    ADD A, A
-    ADD A, COLUMNA_INICIAL
-    LD L, A
-    LD H, 2
-    LD A, (color_jugador)
-    LD D, A
-    CALL dibujar_ficha
-    POP HL                  ; Recuperar L lógico
+    ; 1. Pintar Ficha
+    CALL PintarFichaLogica
 
     ; 2. Leer Teclado
     CALL LeerTeclado        ; Devuelve A: -1, 0, 1, $FE
@@ -60,16 +49,7 @@ JF2:
     PUSH AF                 ; Guardar dirección (-1 o 1)
     
     ; Borrar ficha en posición actual (antes de mover)
-    PUSH HL
-    LD A, L
-    ; Calculo visual inline
-    ADD A, A
-    ADD A, A
-    ADD A, COLUMNA_INICIAL
-    LD L, A
-    LD H, 2
-    CALL borrar_ficha
-    POP HL
+    CALL BorrarFichaLogica
 
     POP AF                  ; Recuperar dirección
     
@@ -86,6 +66,35 @@ JF2:
     LD L, A                 ; L = Nueva columna válida
     LD (ficha_columna), A   ; Guardar en memoria
     JR JF2                  ; Repetir bucle
+
+; --- HELPERS DE PINTADO LÓGICO ---
+PintarFichaLogica:
+    PUSH HL                 ; Guardar L lógico
+    LD A, L
+    ; Calculo visual inline
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
+    LD L, A
+    LD H, 2
+    LD A, (color_jugador)
+    LD D, A
+    CALL dibujar_ficha
+    POP HL                  ; Recuperar L lógico
+    RET
+
+BorrarFichaLogica:
+    PUSH HL
+    LD A, L
+    ; Calculo visual inline
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
+    LD L, A
+    LD H, 2
+    CALL borrar_ficha
+    POP HL
+    RET
 
 ; --- RUTINA DE BAJADA Y LÓGICA ---
 BajarFicha:
