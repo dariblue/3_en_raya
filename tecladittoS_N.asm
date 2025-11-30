@@ -18,6 +18,8 @@ TSN_S:
     LD A,'S'
 
 TSN_FIN:
-    CALL Soltar_Tecla2   ; Esperar a que se suelte la tecla
+    PUSH AF             ; Guardar A (contiene 'S' o 'N')
+    CALL Soltar_Tecla  ; Esperar a que se suelte la tecla
+    POP AF              ; Restaurar A con la tecla detectada
     POP BC              ; Recuperar BC del stack
     RET

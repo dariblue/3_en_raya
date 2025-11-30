@@ -1,11 +1,5 @@
-LeerTeclado:
-; Devuelve en A:
-; -1 ($FF) -> Izquierda
-;  1 ($01) -> Derecha
-;  0 ($00) -> Bajar
-; $FE      -> Fin (F)
-
-    PUSH BC             ; Preservar BC
+teclado_Juego:
+    PUSH BC             ; BC al stack para preservar su valor
 
 teclado_loop_check:
     ; Verificar jugador actual
@@ -78,7 +72,46 @@ ret_fin:
 
 T_SALIDA:
     PUSH AF             ; Guardar resultado
-    CALL Soltar_Tecla2  ; Esperar a soltar
+    CALL Soltar_Tecla  ; Esperar a soltar
     POP AF              ; Recuperar resultado
     POP BC              ; Recuperar BC
     RET
+
+
+; TS_Q:
+;     LD BC,$FBFE         ; Escanear línea T,R,E,W,Q 
+;     IN A,(C)
+;     BIT 0,A
+;     JR NZ,TS_W          ; No han pulsado 'Q' salta a W
+;     LD A,'Q'
+;     JR TS_FIN
+
+; TS_W:            
+;     LD BC,$FBFE         ; Escanear línea T,R,E,W,Q 
+;     IN A,(C)
+;     BIT 1,A
+;     JR NZ,TS_F          ; No han pulsado 'W' salta a F
+;     LD A,'W'
+;     JR TS_FIN
+
+; TS_F:            
+;     LD BC,$FDFE         ; Escanear línea G,F,D,S,A
+;     IN A,(C)
+;     BIT 3,A
+;     JR NZ,TS_ENTER      ; No han pulsado 'F' salta a ENTER
+;     LD A,'F'
+;     JR TS_FIN
+
+; TS_ENTER:
+;     LD BC,$BFFE         ; Escanear línea H,J,K,L,ENTER
+;     IN A,(C)
+;     BIT 0,A
+;     JR NZ,TS_Q          ; No han pulsado 'ENTER' salta a Q
+;     LD A,'*'
+
+; TS_FIN:
+;     PUSH AF             ; Guardar A (contiene 'S' o 'N')
+;     CALL Soltar_Tecla   ; Esperar a que se suelte la tecla
+;     POP AF              ; Restaurar A con la tecla detectada
+;     POP BC              ; Recuperar BC del stack
+;     RET    
