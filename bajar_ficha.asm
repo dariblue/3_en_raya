@@ -66,10 +66,14 @@ colision:
     JR NZ, guardar_j2
     
     LD (IX+0), 1        ; Guardar 1 para Rojo
+    CALL comprobar_ganapuerta
+    CALL comprobar_tablas
     JR cambio_turno
 
 guardar_j2:
     LD (IX+0), 2        ; Guardar 2 para Amarillo
+    CALL comprobar_ganapuerta
+    CALL comprobar_tablas
 
 cambio_turno:
     LD A, (color_jugador)
