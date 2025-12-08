@@ -42,7 +42,7 @@
 - [x] Hacer que cambie de color
 - [x] Toda la logica con base en Mannin 
 - [x] Arreglar la dteccion de teclas
-- [ ] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
+- [x] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
 - [x] Hacer que compruebe si puede bajar una casilla
 - [x] Funcion de bajar la ficha 
-- [ ] Deschatiar el código
+- [ ] DesCHATiar el código
