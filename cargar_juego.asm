@@ -38,16 +38,17 @@ COLOR_JUGADOR_2     EQU $30     ; Color amarillo para jugador 2
 COLOR_FONDO         EQU $07     ; Color de fondo del tablero (blanco sobre negro)
 
 ; Variables para la posición de la ficha
-ficha_fila:    DB 0
-ficha_columna: DB 0
-color_jugador: DB $10   ; Jugador actual ($10 = Rojo, $30 = Amarillo)
-
-
-tablero_logico:
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 0
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 1
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 2
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 3
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 4
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 5
-    DB 0, 0, 0, 0, 0, 0, $FF    ; Columna 6
+ficha_fila:     DB 0
+ficha_columna:  DB 0
+color_jugador:  DB $10   ; Jugador actual ($10 = Rojo, $30 = Amarillo)
+TamColumna:     EQU 8
+Fichas0:        DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF     ; Columna inicio    
+Fichas:
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 0
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 1
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 2
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 3
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 4
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 5
+                DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 6
+                DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF     ; Columna cierre

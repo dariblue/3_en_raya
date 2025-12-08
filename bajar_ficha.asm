@@ -1,22 +1,21 @@
 bajar_ficha:
     ; 1. Calcular puntero IX (Ahora es más fácil, ya tenemos la columna lógica)
-    LD A, (ficha_columna)   ; A = 0..6
+    LD A, (ficha_columna)   ; A = 0.6
     LD C, A                 ; C = Columna
     
-    LD HL, tablero_logico
+    LD HL, Fichas
     LD B, 0
     ; BC = C * 7
     ADD A, A            ; x2
-    ADD A, C            ; x3
-    ADD A, A            ; x6
-    ADD A, C            ; x7
+    ADD A, A            ; x4
+    ADD A, A            ; x8
     LD C, A
     ADD HL, BC
     PUSH HL
     POP IX              ; IX apunta al inicio de columna (Fila 0)
     
     ; 2. Verificar si la columna está llena (Fila 0 ocupada)
-    LD A, (IX+0)
+    LD A, (IX+1)
     OR A
     JP NZ, jugar_ficha   ; Columna llena, volver a control
 
@@ -39,6 +38,7 @@ bajar_ficha:
     LD D, A
     CALL dibujar_ficha
     CALL pausa_breve
+    INC IX
 
 bucle_caida:
     ; Verificar siguiente casilla lógica (IX+1)
