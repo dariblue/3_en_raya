@@ -1,1 +1,0 @@
-; comprobar_Ficha:

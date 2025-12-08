@@ -1,5 +1,20 @@
 juego: 
     CALL jugar_ficha
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     ; CALL tecladoQ_W_F_Enter:    ; Rutina para manejar las teclas Q,W,F,ENTER
     ; ; CALL comprobarTecla         ; Comprueba la tecla pulsada y actúa en consecuencia   
     ; CP 'Q'               ; Comprobar si la tecla es 'Q'
@@ -13,25 +28,6 @@ juego:
     ; CALL Z, cambiar_jugapuertas   ; Si es 'ENTER', cambia el jugador actual
     
     ; JP juego                   ; Repetir el bucle del juego
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ; estructura a seguir en Partida:
 ; Partida:

@@ -37,5 +37,6 @@ JF2:
     JR NC, JF2              ; Si es inválido (>=7 o negativo), repetir bucle (L no cambia)
     
     LD L, A                 ; Si es válido, actualizar L
-    LD (ficha_columna), A   ; Actualizar memoria
+    LD (ficha_columna), A   ; Actualizar 
+    ; CALL comprobar_ganapuerta
     JR JF2                  ; Repetir bucle

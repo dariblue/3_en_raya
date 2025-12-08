@@ -46,3 +46,4 @@
 - [x] Hacer que compruebe si puede bajar una casilla
 - [x] Funcion de bajar la ficha 
 - [ ] DesCHATiar el código
+- [ ] Toda la lógica del juego en Conecta4.asm
