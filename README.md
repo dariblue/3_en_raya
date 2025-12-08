@@ -8,7 +8,7 @@
 - [x] mostrar mensaje de adios si no se quiere jugar.  
 ### DONE. Dibujar el tablero (6x7)
 - [X] fichas de 2x3
-### Dibujar la ficha Inicial
+### DONE. Dibujar la ficha Inicial
 - [x] 1ºcolumna 1ºcolor
 - [x] Hacer bien la ficha con el color del jugador
 - [x] lee que pulsamos W o Q
@@ -21,18 +21,28 @@
 
 
 # Cosas a realizar en la entrega 2:
-- [ ] Cambiar teclas de cada jugador
+- [x] Cambiar teclas de cada jugador
 - [x] Cambiar el color de cada jugador
 - [x] Comprobar que puede bajar columna
 - [x] Simulación caída
 
 
+# Cosas a realizar en la entrega 3:
+### Detección del 4 en raya
+- [ ] Comprobar si se alcanza en 4 en raya (vertical, horizontal y diagonales)
+- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida.
 
-## Cosas que tenemos que hacer, por prioridas
+### Detección de tablas
+- [ ] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
+- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida
+
+
+## Cosas que tenemos que hacer/retocar, por prioridas
 - [x] Implementar la ficha
 - [x] Hacer que cambie de color
-- [ ] Toda la logica con base en Mannin 
-- [ ] Arreglar la dteccion de teclas
-- [x] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
+- [x] Toda la logica con base en Mannin 
+- [x] Arreglar la dteccion de teclas
+- [ ] Implementar la tabla en codigo: ![Imagen de como se implementa en codigo](assets/image.png)
 - [x] Hacer que compruebe si puede bajar una casilla
 - [x] Funcion de bajar la ficha 
+- [ ] Deschatiar el código
