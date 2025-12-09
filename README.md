@@ -29,12 +29,12 @@
 
 # Cosas a realizar en la entrega 3:
 ### Detección del 4 en raya
-- [ ] Comprobar si se alcanza en 4 en raya (vertical, horizontal y diagonales)
-- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida.
+- [x] Comprobar si se alcanza en 4 en raya (vertical, horizontal y diagonales)
+- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida. (VITTOPITTOPIZZA)
 
 ### Detección de tablas
-- [ ] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
-- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida
+- [x] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
+- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida (VITTOPITTOPIZZA)
 
 
 ## Cosas que tenemos que hacer/retocar, por prioridas

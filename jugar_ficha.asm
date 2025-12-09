@@ -38,5 +38,4 @@ JF2:
     
     LD L, A                 ; Si es válido, actualizar L
     LD (ficha_columna), A   ; Actualizar 
-    ; CALL comprobar_ganapuerta
     JR JF2                  ; Repetir bucle
