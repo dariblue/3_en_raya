@@ -47,3 +47,7 @@
 - [x] Funcion de bajar la ficha 
 - [ ] DesCHATiar el código
 - [ ] Toda la lógica del juego en Conecta4.asm
+- [ ] Resetear las variables post juegos.
+
+## Entrega 4, cositas a intentar hacer
+- [ ] Marcar las 4 fichas que hacen el 4 en raya (parpadean de ese mismo color)
