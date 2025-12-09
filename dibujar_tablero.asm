@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: dibujarTablero
+; Entrada: Ninguna
+; Salida: Vuelca el recurso tablerito.scr en pantalla e inicializa variables
+; Datos del programa: tablerito, ficha_fila, ficha_columna
+; ==============================================================================
+
 dibujarTablero:
     LD HL, tablerito 
     LD DE, $4000  ; Dirección de pantalla en ZX Spectrum

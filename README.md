@@ -30,11 +30,11 @@
 # Cosas a realizar en la entrega 3:
 ### Detección del 4 en raya
 - [x] Comprobar si se alcanza en 4 en raya (vertical, horizontal y diagonales)
-- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida. (VITTOPITTOPIZZA)
+- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida. (@VITTOPITTOPIZZA)
 
 ### Detección de tablas
 - [x] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
-- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida (VITTOPITTOPIZZA)
+- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida (@VITTOPITTOPIZZA)
 
 
 ## Cosas que tenemos que hacer/retocar, por prioridas
@@ -51,3 +51,4 @@
 
 ## Entrega 4, cositas a intentar hacer
 - [ ] Marcar las 4 fichas que hacen el 4 en raya (parpadean de ese mismo color)
+- [ ] Resetear el tablero para otra partida 

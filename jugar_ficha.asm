@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: jugar_ficha
+; Entrada: ficha_columna
+; Salida: Gestiona el movimiento lateral y la bajada de la ficha
+; Datos del programa: COLUMNA_INICIAL
+; ==============================================================================
+
 jugar_ficha:
     LD A, 0
     LD A, (ficha_columna)

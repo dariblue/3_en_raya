@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: tecladoS_N
+; Entrada: Ninguna
+; Salida: A ('S' o 'N')
+; Datos del programa: Puertos de E/S
+; ==============================================================================
+
 tecladoS_N:
 ;Código completo del tecladito para S o N
     PUSH BC             ; BC al stack para preservar su valor

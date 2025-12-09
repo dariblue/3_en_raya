@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: mover_dcha
+; Entrada: ficha_columna, ficha_fila
+; Salida: Mueve la ficha visualmente a la derecha si es posible
+; Datos del programa: COLUMNA_MAXIMA, COLUMNA_INCREMENTO
+; ==============================================================================
+
 mover_dcha:
     ; 1. Cargar posición actual
     LD A, (ficha_fila)

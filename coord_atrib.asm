@@ -1,5 +1,9 @@
-; Rutina que recibe en H,L las coordenadas de la pantalla (fila, columna)
-; Devuelve en HL la dirección de memoria de atributos
+; ==============================================================================
+; Rutina: coord_Atrib
+; Entrada: H (Fila 0-23), L (Columna 0-31)
+; Salida: HL (Dirección de memoria de atributos correspondiente)
+; Datos del programa: Ninguno
+; ==============================================================================
 coord_Atrib:
     PUSH AF
     

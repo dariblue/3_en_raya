@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: pintar_ficha
+; Entrada: L (Columna lógica 0-6)
+; Salida: Calcula posición visual y llama a dibujar_ficha
+; Datos del programa: COLUMNA_INICIAL, color_jugador
+; ==============================================================================
+
 pintar_ficha:
     PUSH HL
     PUSH DE

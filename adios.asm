@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: adios
+; Entrada: Ninguna
+; Salida: Muestra el mensaje de despedida en pantalla
+; Datos del programa: Mensaje_adios, Adios
+; ==============================================================================
+
 adios:
 ; Rutina para mostrar el mensaje de despedida final
     CALL CLEARSCR       ; Borrar pantalla

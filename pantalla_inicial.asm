@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: bienvenida
+; Entrada: Ninguna
+; Salida: Muestra la pantalla de título
+; Datos del programa: elreal.scr, Titulo, Mensaje
+; ==============================================================================
+
 bienvenida:
     LD A, 0         ; Inicializar el registro A con 0
     OUT ($FE), A    ; Pone el borde de la pantalla en negro

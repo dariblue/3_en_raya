@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: bajar_ficha
+; Entrada: ficha_columna (Variable en memoria)
+; Salida: Modifica el tablero lógico y visual, gestiona la caída y turnos
+; Datos del programa: Fichas, COLUMNA_INICIAL, color_jugador
+; ==============================================================================
+
 bajar_ficha:
     ; 1. Calcular puntero IX (Ahora es más fácil, ya tenemos la columna lógica)
     LD A, (ficha_columna)   ; A = 0.6

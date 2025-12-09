@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: despedida
+; Entrada: Ninguna
+; Salida: Muestra la pantalla final y mensaje de jugar de nuevo
+; Datos del programa: Titulo_final, Mensaje_final
+; ==============================================================================
+
 despedida: 
     CALL CLEARSCR   ; Borrar pantalla
     LD A, 0         ; Inicializar el registro A con 0

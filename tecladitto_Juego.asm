@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: teclado_Juego
+; Entrada: color_jugador (para determinar teclas)
+; Salida: A (-1: Izq, 1: Der, 0: Bajar, $FE: Fin)
+; Datos del programa: Puertos de E/S
+; ==============================================================================
+
 teclado_Juego:
     PUSH BC             ; BC al stack para preservar su valor
 

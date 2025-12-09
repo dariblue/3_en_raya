@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: inicializar
+; Entrada: Ninguna
+; Salida: Inicializa jugadores y dibuja el tablero
+; Datos del programa: tablerito, Fichas, color_jugador
+; ==============================================================================
+
 inicializar:
     CALL inic_jugadores  ; Inicializar los jugadores
     CALL dibujarTablero  ; Dibujar el tablero

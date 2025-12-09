@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: PRINTAT
+; Entrada: A (Atributos), B (Fila), C (Columna), IX (Puntero a string)
+; Salida: Imprime la cadena en pantalla
+; Datos del programa: PRINT_ATTR
+; ==============================================================================
+
 ; -------------------------------
 ; ZX Spectrum Text print library
 ; Daniel León - AOC - UFV 2020

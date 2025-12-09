@@ -1,3 +1,10 @@
+; ==============================================================================
+; Rutina: mover_izq
+; Entrada: ficha_columna, ficha_fila
+; Salida: Mueve la ficha visualmente a la izquierda si es posible
+; Datos del programa: COLUMNA_INICIAL, COLUMNA_INCREMENTO
+; ==============================================================================
+
 mover_izq:
     ; 1. Cargar posición actual
     LD A, (ficha_fila)

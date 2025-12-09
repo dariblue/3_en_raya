@@ -1,8 +1,9 @@
-; Rutina para dibujar una ficha de 2x3
-; Entrada: 
-;   H = Fila superior
-;   L = Columna izquierda
-;   D = Atributo de color (ej: $10 para rojo, $30 para amarillo)
+; ==============================================================================
+; Rutina: dibujar_ficha
+; Entrada: H (Fila), L (Columna), D (Atributo de color)
+; Salida: Pinta un bloque de 2x3 con el atributo especificado
+; Datos del programa: Ninguno
+; ==============================================================================
 dibujar_ficha:
     PUSH BC
     PUSH DE
