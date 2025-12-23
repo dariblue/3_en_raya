@@ -93,7 +93,7 @@ comprobar_ganapuerta:
 ganapuerta:
     POP HL : POP DE : POP BC
     LD A, 1             ; Retornar 1 (Victoria)
-    CALL fin
+    CALL victoria       ; Llamar a la rutina de victoria (cambiar a Ret -> call)
 
 ; ==============================================================================
 ; Subrutina: ContarDireccion
