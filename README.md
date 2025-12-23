@@ -52,3 +52,7 @@
 ## Entrega 4, cositas a intentar hacer
 - [ ] Marcar las 4 fichas que hacen el 4 en raya (parpadean de ese mismo color)
 - [ ] Resetear el tablero para otra partida 
+- [ ] Si columna llena -> avisar 
+- [ ] Fin de partida con mensaje y ganador de color
+- [ ] Documentación
+- [ ] EXTRA Fichas redondas
