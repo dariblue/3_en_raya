@@ -47,7 +47,6 @@ fin2:
     INCLUDE "bajar_ficha.asm"           ; Incluir el archivo con la rutina para bajar la pieza
     INCLUDE "jugar_ficha.asm"           ; Incluir el archivo con la rutina para jugar la ficha   
     INCLUDE "pintar_ficha.asm"          ; Incluir el archivo con la rutina para pintar la ficha en la ruta actual
-    ;INCLUDE "slot_pointer.asm"         ; Incluir el archivo con la rutina para gestionar el slot pointer
     INCLUDE "comprobar_4en_raya.asm"    ; Incluir el archivo con la rutina para comprobar que la ficha ficha haga un 4 en raya
     INCLUDE "comprobar_tablas.asm"      ; Incluir el archivo con la rutina para comprobar si el tablero está lleno
 ;-------------------------------------------------------------------------------------------
