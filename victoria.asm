@@ -11,27 +11,27 @@ victoria:
     CALL CLEARSCR   ; Borrar pantalla
 
     ; Pintar la pantalla de victoria
-    LD HL, XD       ; Dirección del bucle que pinta la pantalla
+    LD HL, XD2       ; Dirección del bucle que pinta la pantalla
     LD DE, $4000    
     LD BC, $5B00 - $4000 
     LDIR          
 
-    ; Título de victoria   
-    LD A,2+$80      ; Letra roja, fondo negro, parpadeante
-    LD B,1          ; Coordenadas (filas) para pintar el título
-    LD C,4          ; Coordenadas (columnas) para pintar el título
-    LD IX, Titulo   ; Dirección del título
-    CALL PRINTAT    ; Imprime el título
+    ; ; Título de victoria   
+    ; LD A,2+$80      ; Letra roja, fondo negro, parpadeante
+    ; LD B,1          ; Coordenadas (filas) para pintar el título
+    ; LD C,4          ; Coordenadas (columnas) para pintar el título
+    ; LD IX, Titulo2   ; Dirección del título
+    ; CALL PRINTAT    ; Imprime el título
 
     ; Mensaje de victoria
     LD A,3          ; Letra moradito Vegetta, fondo negro
-    LD B,21         ; Coordenadas (filas) para pintar el mensaje
+    LD B,12         ; Coordenadas (filas) para pintar el mensaje
     LD C,1          ; Coordenadas (columnas) para pintar el mensaje
-    LD IX, Mensaje  ; Dirección del mensaje
+    LD IX, Mensaje2  ; Dirección del mensaje
     CALL PRINTAT    ; Imprime el mensaje
 
     RET
 ;-------------------------------------------------------------------------------------
-XD: INCBIN "vctoria.scr"
-Titulo: db "Victoria en Conecta 4",0    ; Título
-Mensaje: db "¡Felicidades! Ha ganado el jugador.",0   ; Mensaje de victoria
+XD2: INCBIN "vctoria.scr"
+; Titulo2: db "Victoria en Conecta 4",0    ; Título
+Mensaje2: db "¡Felicidades!",0   ; Mensaje de victoria
