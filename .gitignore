@@ -1,0 +1,12 @@
+.vscode
+*.lst
+*.sld
+mannin.bin
+mannin.lst
+mannin.sld
+mannin.bin
+mannin.lst
+mannin.sld
+.temp
+.tmp/disasm.list
+*.list
