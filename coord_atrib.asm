@@ -9,7 +9,7 @@ coord_Atrib:
     
     ; Calculo parte BAJA: L = (Fila * 32) + Columna
     LD A, H
-    SLA A : SLA A : SLA A : SLA A : SLA A       ; A = Fila * 32 (5 desplazamientos)
+        SLA A : SLA A : SLA A : SLA A : SLA A       ; A = Fila * 32 (5 desplazamientos)
     OR L        ; A = (Fila * 32) + Columna
     LD L, A     ; Guardamos parte baja en L
     

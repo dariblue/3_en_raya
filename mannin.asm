@@ -40,12 +40,11 @@ fin2:
     INCLUDE "adios.asm"                 ; Incluir el archivo con el mensaje de despedida final
     INCLUDE "tecladitto_Juego.asm"      ; Incluir el archivo con la rutina del tecladito Q,W,F,ENTER
     INCLUDE "piecitta.asm"              ; Incluir el archivo con la rutina para dibujar fichas
-    INCLUDE "dibujar_tablero.asm"       ; Incluir el archivo con la rutina para dibujar el tablero
     INCLUDE "movef_derecha.asm"         ; Incluir el archivo con la rutina para mover ficha a la derecha
     INCLUDE "movef_izquierda.asm"       ; Incluir el archivo con la rutina para mover ficha a la izquierda
     INCLUDE "borrar_ficha.asm"          ; Incluir el archivo con la rutina para borrar ficha
     INCLUDE "bajar_ficha.asm"           ; Incluir el archivo con la rutina para bajar la pieza
-    INCLUDE "jugar_ficha.asm"           ; Incluir el archivo con la rutina para jugar la ficha   
+    INCLUDE "jugar_ficha.asm"           ; Incluir el archivo con la rButina para jugar la ficha   
     INCLUDE "pintar_ficha.asm"          ; Incluir el archivo con la rutina para pintar la ficha en la ruta actual
     INCLUDE "comprobar_4en_raya.asm"    ; Incluir el archivo con la rutina para comprobar que la ficha ficha haga un 4 en raya
     INCLUDE "comprobar_tablas.asm"      ; Incluir el archivo con la rutina para comprobar si el tablero está lleno

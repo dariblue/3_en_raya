@@ -36,8 +36,7 @@
 - [x] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
 - [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida (@VITTOPITTOPIZZA)
 
-
-## Cosas que tenemos que hacer/retocar, por prioridas
+# Cosas para la entrega Final (09/01)
 - [x] Implementar la ficha
 - [x] Hacer que cambie de color
 - [x] Toda la logica con base en Mannin 
@@ -45,14 +44,12 @@
 - [x] Implementar la tabla en codigo
 - [x] Hacer que compruebe si puede bajar una casilla
 - [x] Funcion de bajar la ficha 
-- [ ] DesCHATiar el código
-- [ ] Toda la lógica del juego en Conecta4.asm
-- [ ] Resetear las variables post juegos.
-
-## Entrega 4, cositas a intentar hacer
-- [ ] Marcar las 4 fichas que hacen el 4 en raya (parpadean de ese mismo color)
-- [ ] Resetear el tablero para otra partida 
-- [ ] Si columna llena -> avisar 
+- [x] DesCHATiar el código
+- [x] Toda la lógica del juego en Conecta4.asm
 - [ ] Fin de partida con mensaje y ganador de color
 - [ ] Documentación
+- [ ] Resetear el tablero post juego. (ARREGLAR BAJAR_FICHA)
+
+## Entrega 4, cositas a intentar hacer
+- [ ] EXTRA Si columna llena -> avisar 
 - [ ] EXTRA Fichas redondas

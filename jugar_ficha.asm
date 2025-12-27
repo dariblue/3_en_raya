@@ -11,11 +11,11 @@ jugar_ficha:
     LD L, A                 ; L = Columna Lógica (0-6)
 
 JF2:
-    CALL pintar_ficha        ; Pinta la ficha en la posición actual (L)
+    CALL pintar_fic ha        ; Pinta la ficha en la posición actual (L)
 
     CALL teclado_Juego        ; Devuelve A: -1, 0, 1, $FE
     
-    CP $FE
+    CP $FE            ; Comprobar si es ENTER
     JP Z, fin         ; Salida de emergencia
 
     OR A                    ; Comprobar si es 0 (Bajar)
@@ -27,16 +27,8 @@ JF2:
     ADD A, L                ; A = Nueva Posición (Candidata)
     
     PUSH AF                 ; Guardamos la nueva posición
-    ; Calcular coordenadas visuales para borrar
-    PUSH HL                 ; Guardamos L (lógica)
-    LD A, L
-    ADD A, A
-    ADD A, A
-    ADD A, COLUMNA_INICIAL
-    LD L, A
-    LD H, 2
-    CALL borrar_ficha        ; Borramos (ahora genérico)
-    POP HL                  ; Recuperamos L (lógica)
+    
+    CALL borrar_ficha_preview ; Borramos ficha en posición actual (L)
 
     POP AF                  ; Recuperamos la nueva posición
     
