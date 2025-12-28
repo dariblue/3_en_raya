@@ -11,7 +11,7 @@ jugar_ficha:
     LD L, A                 ; L = Columna Lógica (0-6)
 
 JF2:
-    CALL pintar_fic ha        ; Pinta la ficha en la posición actual (L)
+    CALL pintar_ficha        ; Pinta la ficha en la posición actual (L)
 
     CALL teclado_Juego        ; Devuelve A: -1, 0, 1, $FE
     
