@@ -46,9 +46,9 @@
 - [x] Funcion de bajar la ficha 
 - [x] DesCHATiar el código
 - [x] Toda la lógica del juego en Conecta4.asm
-- [ ] Fin de partida con mensaje y ganador de color
+- [x] Fin de partida con mensaje y ganador de color
 - [x] Documentación
-- [ ] Resetear el tablero post juego. (ARREGLAR BAJAR_FICHA)
+- [x] Resetear el tablero post juego. (ARREGLAR BAJAR_FICHA)
 
 ## Entrega 4, cositas a intentar hacer
 - [ ] EXTRA Si columna llena -> avisar 
