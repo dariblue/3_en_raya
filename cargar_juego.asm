@@ -8,7 +8,6 @@
 inicializar:
     CALL inic_jugadores  ; Inicializar los jugadores
     CALL dibujarTablero  ; Dibujar el tablero
-    ;CALL dibujar_ficha
     RET
 
 inic_jugadores:
@@ -25,15 +24,35 @@ inic_jugadores:
     EXX          ; volver a registros primarios: DE contiene J1, (DE)' contiene J2
     RET
 
-; Cambia el jugador activo (primario <-> secundario)
-cambiar_jugapuertas:
-    EXX
+dibujarTablero:
+    LD HL, tablerito 
+    LD DE, $4000  ; Dirección de pantalla en ZX Spectrum
+    LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes) tamaño pantalla ZX Spectrum
+    LDIR 
+
+    LD H, 2                 ; Fila 2
+    LD L, 0                 ; Columna lógica inicial (0 = Primera columna)
+    
+    ; Guardar la posición inicial
+    LD A, H
+    LD (ficha_fila), A
+    LD A, L
+    LD (ficha_columna), A
+    
+    LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (rojo)
     RET
+    
+
+; ; Cambia el jugador activo (primario <-> secundario)
+; cambiar_jugapuertas:
+;     EXX
+;     RET
 
 ;-----------------------------------------------------------------------------------------------------
-; ETIQUETAS 7 CONSTANTES Y VARIABLES DEL JUEGO
+; ETIQUETAS, CONSTANTES Y VARIABLES DEL JUEGO
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr" ; Recurso binario del tablero de Conecta 4
+
 ; Constantes para el tablero
 COLUMNA_INICIAL     EQU 2       ; Primera columna del tablero
 COLUMNA_INCREMENTO  EQU 4       ; Incremento entre columnas (3 de ficha + 1 de borde)
