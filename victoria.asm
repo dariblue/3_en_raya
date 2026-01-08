@@ -6,9 +6,9 @@
 ; ==============================================================================
 
 victoria:
+    CALL CLEARSCR   ; Borrar pantalla
     LD A, 0         ; Inicializar el registro A con 0
     OUT ($FE), A    ; Pone el borde de la pantalla en negro
-    CALL CLEARSCR   ; Borrar pantalla
 
     ; Pintar la pantalla de victoria
     LD HL, XD2       ; Dirección del bucle que pinta la pantalla
@@ -16,22 +16,37 @@ victoria:
     LD BC, $5B00 - $4000 
     LDIR          
 
-    ; ; Título de victoria   
-    ; LD A,2+$80      ; Letra roja, fondo negro, parpadeante
-    ; LD B,1          ; Coordenadas (filas) para pintar el título
-    ; LD C,4          ; Coordenadas (columnas) para pintar el título
-    ; LD IX, Titulo2   ; Dirección del título
-    ; CALL PRINTAT    ; Imprime el título
-
     ; Mensaje de victoria
-    LD A,3          ; Letra moradito Vegetta, fondo negro
+    LD A, (ganadora)          ; Letra color ganador, fondo azul
     LD B,12         ; Coordenadas (filas) para pintar el mensaje
-    LD C,1          ; Coordenadas (columnas) para pintar el mensaje
-    LD IX, Mensaje2  ; Dirección del mensaje
+    LD C,5          ; Coordenadas (columnas) para pintar el mensaje (ajustado para centrar)
+    
+    
+    ; Seleccionar mensaje según ganador
+    CP $0A          ; ¿Es Rojo (Jugador 1)?
+    JR Z, msg_j1
+    
+    LD IX, MsgJ2    ; Si no es Rojo, es Amarillo (Jugador 2)
+    JR imprimir_msg
+
+
+msg_j1:
+    LD IX, MsgJ1
+
+imprimir_msg:
     CALL PRINTAT    ; Imprime el mensaje
 
-    RET
+    ; Mensaje final tras ganar
+    LD A,11          ; Letra azulita, fondo negro
+    LD B,21       ; Coordenadas para pintar el mensaje
+    LD C,2       
+    LD IX,Mensaje_final_ganar   ; Dirección del mensaje
+    CALL PRINTAT    ; Imprime el mensaje
+
+
+
 ;-------------------------------------------------------------------------------------
 XD2: INCBIN "vctoria.scr"
-; Titulo2: db "Victoria en Conecta 4",0    ; Título
-Mensaje2: db "¡Felicidades!",0   ; Mensaje de victoria
+MsgJ1: db "Jugador 1 ha ganado!!",0
+MsgJ2: db "Jugador 2 ha ganado!!",0
+Mensaje_final_ganar:   db "Quieres jugar de nuevo (S/N)?",0   ; Mensaje 

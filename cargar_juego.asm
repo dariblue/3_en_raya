@@ -6,7 +6,7 @@
 ; ==============================================================================
 
 inicializar:
-    CALL inic_jugadores  ; Inicializar los jugadores
+    CALL inic_jugadores  ; Inicializar los jugadores 
     CALL dibujarTablero  ; Dibujar el tablero
     RET
 
@@ -24,9 +24,10 @@ inic_jugadores:
     EXX          ; volver a registros primarios: DE contiene J1, (DE)' contiene J2
     RET
 
+
 dibujarTablero:
     LD HL, tablerito 
-    LD DE, $4000  ; Dirección de pantalla en ZX Spectrum
+    LD DE, $4000            ; Dirección de pantalla en ZX Spectrum
     LD BC, $5B00 - $4000    ; tamaño: $5B00 - $4000 = $1B00 (6912 bytes) tamaño pantalla ZX Spectrum
     LDIR 
 
@@ -42,14 +43,9 @@ dibujarTablero:
     LD D, COLOR_JUGADOR_1   ; Color del jugador 1 (rojo)
     RET
     
-
-; ; Cambia el jugador activo (primario <-> secundario)
-; cambiar_jugapuertas:
-;     EXX
-;     RET
-
 ;-----------------------------------------------------------------------------------------------------
 ; ETIQUETAS, CONSTANTES Y VARIABLES DEL JUEGO
+
 ; Etiqueta del recurso binario del tablero (archivo .scr)
 tablerito: INCBIN "tablerito.scr" ; Recurso binario del tablero de Conecta 4
 
@@ -67,9 +63,10 @@ COLOR_FONDO         EQU $07     ; Color de fondo del tablero (blanco sobre negro
 ficha_fila:     DB 0
 ficha_columna:  DB 0
 color_jugador:  DB $10   ; Jugador actual ($10 = Rojo, $30 = Amarillo)
-TamColumna:     EQU 8
-Fichas0:        DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF     ; Columna inicio    
-Fichas:
+ganadora:       DB 0     ; Color del texto de victoria (Ink color, Paper 0)
+tamColumna:     EQU 8
+fichas0:        DB $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF     ; Columna inicio    
+fichas:
                 DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 0
                 DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 1
                 DB $FF, 0, 0, 0, 0, 0, 0, $FF    ; Columna 2

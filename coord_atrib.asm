@@ -1,15 +1,9 @@
-; ==============================================================================
-; Rutina: coord_Atrib
-; Entrada: H (Fila 0-23), L (Columna 0-31)
-; Salida: HL (Dirección de memoria de atributos correspondiente)
-; Datos del programa: Ninguno
-; ==============================================================================
 coord_Atrib:
     PUSH AF
     
     ; Calculo parte BAJA: L = (Fila * 32) + Columna
     LD A, H
-        SLA A : SLA A : SLA A : SLA A : SLA A       ; A = Fila * 32 (5 desplazamientos)
+    SLA A : SLA A : SLA A : SLA A : SLA A       ; A = Fila * 32 (5 desplazamientos)
     OR L        ; A = (Fila * 32) + Columna
     LD L, A     ; Guardamos parte baja en L
     

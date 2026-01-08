@@ -1,11 +1,4 @@
-; ==============================================================================
-; Rutina: teclado_Juego
-; Entrada: color_jugador (para determinar teclas)
-; Salida: A (-1: Izq, 1: Der, 0: Bajar, $FE: Fin)
-; Datos del programa: Puertos de E/S
-; ==============================================================================
-
-teclado_Juego:
+tecladitto:
     PUSH BC             ; BC al stack para preservar su valor
 
 teclado_loop_check:
@@ -14,7 +7,7 @@ teclado_loop_check:
     CP $10              ; ¿Es Jugador 1 (Rojo)?
     JR Z, check_j1
 
-    ; --- JUGADOR 2 (Amarillo) ---
+    ;---JUGADOR 2(Amarillo)---
     ; O (Izquierda)
     LD BC,$DFFE
     IN A,(C)
@@ -36,7 +29,7 @@ teclado_loop_check:
     JR check_fin        ; Comprobar F
 
 check_j1:
-    ; --- JUGADOR 1 (Rojo) ---
+    ;---JUGADOR 1(Rojo)---
     ; Q (Izquierda)
     LD BC,$FBFE         
     IN A,(C)
@@ -65,13 +58,13 @@ check_fin:
     JR teclado_loop_check ; Esperar hasta que se pulse algo
 
 ret_izq:
-    LD A, $FF           ; -1
+    LD A, $FF           ; Guarda el valor -1 en A
     JR T_SALIDA
 ret_dcha:
-    LD A, 1             ; 1
+    LD A, 1             ; Guarda el valor +1 en A
     JR T_SALIDA
 ret_bajar:
-    LD A, 0             ; 0
+    LD A, 0             ; Guarda el valor 0 en A
     JR T_SALIDA
 ret_fin:
     LD A, $FE           ; Código de fin
@@ -79,46 +72,7 @@ ret_fin:
 
 T_SALIDA:
     PUSH AF             ; Guardar resultado
-    CALL Soltar_Tecla  ; Esperar a soltar
+    CALL soltar_tecla   ; Esperar a soltar
     POP AF              ; Recuperar resultado
     POP BC              ; Recuperar BC
     RET
-
-
-; TS_Q:
-;     LD BC,$FBFE         ; Escanear línea T,R,E,W,Q 
-;     IN A,(C)
-;     BIT 0,A
-;     JR NZ,TS_W          ; No han pulsado 'Q' salta a W
-;     LD A,'Q'
-;     JR TS_FIN
-
-; TS_W:            
-;     LD BC,$FBFE         ; Escanear línea T,R,E,W,Q 
-;     IN A,(C)
-;     BIT 1,A
-;     JR NZ,TS_F          ; No han pulsado 'W' salta a F
-;     LD A,'W'
-;     JR TS_FIN
-
-; TS_F:            
-;     LD BC,$FDFE         ; Escanear línea G,F,D,S,A
-;     IN A,(C)
-;     BIT 3,A
-;     JR NZ,TS_ENTER      ; No han pulsado 'F' salta a ENTER
-;     LD A,'F'
-;     JR TS_FIN
-
-; TS_ENTER:
-;     LD BC,$BFFE         ; Escanear línea H,J,K,L,ENTER
-;     IN A,(C)
-;     BIT 0,A
-;     JR NZ,TS_Q          ; No han pulsado 'ENTER' salta a Q
-;     LD A,'*'
-
-; TS_FIN:
-;     PUSH AF             ; Guardar A (contiene 'S' o 'N')
-;     CALL Soltar_Tecla   ; Esperar a que se suelte la tecla
-;     POP AF              ; Restaurar A con la tecla detectada
-;     POP BC              ; Recuperar BC del stack
-;     RET    

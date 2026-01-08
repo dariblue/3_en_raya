@@ -1,17 +1,8 @@
-; ==============================================================================
-; Rutina: comprobar_ganapuerta
-; Entrada: IX = Puntero a la última ficha colocada
-; Salida:  A = 1 (Victoria), A = 0 (Sigue jugando)
-; Datos del programa: C ->  Contiene el numero de fichas adyacentes para 
-;                           comprobar si ha ganado
-; ==============================================================================
-
 comprobar_ganapuerta:
     PUSH BC : PUSH DE : PUSH HL
-    
-    ; 1. Obtener ID del jugador (1 o 2) de la casilla actual
+    ; Obtener ID del jugador (1 o 2) de la casilla actual
     LD A, (IX+0)
-    LD B, A             ; B = ID Jugador a buscar
+    LD B, A 
 
     ; ==========================================================================
     ; 1. VERTICAL (Solo hacia abajo, +1)
@@ -84,24 +75,36 @@ comprobar_ganapuerta:
     JR NC, ganapuerta
 
     ; ==========================================================================
-    ; 5. Nadie ha ganado; si llegamos aqui es que no hay ningun patron ganador
+    ; 5. Nadie ha ganado; 
     ; ==========================================================================
     POP HL : POP DE : POP BC
     LD A, 0             ; Retornar 0 (Sigue jugando)
     RET
 
+
 ganapuerta:
     POP HL : POP DE : POP BC
-    LD A, 1             ; Retornar 1 (Victoria)
-    CALL victoria       ; Llamar a la rutina de victoria (cambiar a Ret -> call)
 
-; ==============================================================================
-; Subrutina: ContarDireccion
-; Cuenta fichas consecutivas iguales al jugador (B) en una dirección (DE)
-; Entrada: IX (Inicio), DE (Salto), B (ID Jugador)
-; Salida:  A (Número de fichas encontradas en esa dirección)
-; Nota:    Preserva IX original.
-; ==============================================================================
+    ; Calcular color ganadora
+    LD A, (color_jugador)
+    CP COLOR_JUGADOR_1  ; Si es Rojo ($10), el ganador fue Amarillo (porque ya cambió el turno)
+    JR Z, gano_amarillo
+    
+    ; Gano Rojo
+    LD A, $0A           ; Ink Rojo (2), Paper Azul (1<<3=8) -> $0A
+    JR guardar_ganadora
+
+gano_amarillo:
+    LD A, $0E           ; Ink Amarillo (6), Paper Azul (1<<3=8) -> $0E
+
+guardar_ganadora:
+    LD (ganadora), A
+
+    LD A, 1             ; Retornar 1 (Victoria)
+    RET                 ; Volver a conecta4_juego.asm para gestionar la victoria allí
+
+
+;CONTADORES
 contador_Ganapuerta:
     PUSH IX             ; Guardamos el puntero original (centro)
     PUSH BC             ; Guardamos B (ID) y C (Contador principal)

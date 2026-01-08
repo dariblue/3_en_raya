@@ -1,9 +1,19 @@
-; ==============================================================================
-; Rutina: dibujar_ficha
-; Entrada: H (Fila), L (Columna), D (Atributo de color)
-; Salida: Pinta un bloque de 2x3 con el atributo especificado
-; Datos del programa: Ninguno
-; ==============================================================================
+pintar_ficha:
+    PUSH HL
+    PUSH DE
+    LD A, L
+    ADD A, A
+    ADD A, A
+    ADD A, COLUMNA_INICIAL
+    LD L, A
+    LD H, 2
+    LD A, (color_jugador)
+    LD D, A
+    CALL dibujar_ficha
+    POP DE
+    POP HL
+    RET
+
 dibujar_ficha:
     PUSH BC
     PUSH DE
