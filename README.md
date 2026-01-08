@@ -30,11 +30,11 @@
 # Cosas a realizar en la entrega 3:
 ### Detección del 4 en raya
 - [x] Comprobar si se alcanza en 4 en raya (vertical, horizontal y diagonales)
-- [ ] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida. (@VITTOPITTOPIZZA)
+- [x] Si se alcanza el 4 en raya, mostrar mensaje de ganador y preguntar si quiere jugar otra partida. (@VITTOPITTOPIZZA)
 
 ### Detección de tablas
 - [x] Si no hay 4 en raya, comprobar q el tablero esta lleno -> empate (Tablas)
-- [ ] Si Tablas, mensaje de empate y preguntar si quiere otra partida (@VITTOPITTOPIZZA)
+- [x] Si Tablas, mensaje de empate y preguntar si quiere otra partida (@VITTOPITTOPIZZA)
 
 # Cosas para la entrega Final (09/01)
 - [x] Implementar la ficha
@@ -44,12 +44,11 @@
 - [x] Implementar la tabla en codigo
 - [x] Hacer que compruebe si puede bajar una casilla
 - [x] Funcion de bajar la ficha 
-- [x] DesCHATiar el código
 - [x] Toda la lógica del juego en Conecta4.asm
 - [x] Fin de partida con mensaje y ganador de color
 - [x] Documentación
 - [x] Resetear el tablero post juego. (ARREGLAR BAJAR_FICHA)
 
-## Entrega 4, cositas a intentar hacer
+## Entrega 4, cositas a intentar hacer (NIDE)
 - [ ] EXTRA Si columna llena -> avisar 
 - [ ] EXTRA Fichas redondas
